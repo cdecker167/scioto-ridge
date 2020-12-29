@@ -1,0 +1,205 @@
+:root {
+	--red: #EF3E3D;
+	--blue: #32C5F4;
+	--tan: #E6DADA;
+	--navy: #185f76;
+}
+
+html{
+	
+	font-family: 'Raleway', sans-serif;
+	/*font-weight: bold;*/
+}
+
+h1{
+	color: #32C5F4;
+	text-align: center;
+}
+
+body{
+	margin: 0 auto;
+}
+
+header{
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coaster1.jpg");
+	height: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	color: #e6dada;
+}
+
+header .button{
+	
+	margin: 0px 10% 25% 10%;
+}
+
+header p{
+	padding-top: 20%;
+	margin: 0 auto 25px auto;
+}
+
+.headbutt{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+/*NAV BAR*/
+
+nav{
+	position: fixed;
+	margin: 0 auto;
+	height:auto; 
+	background-color:#E6DADA;
+	font-size: 1.4vw;
+	vertical-align: middle;
+	padding: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width:100%;
+}
+
+nav .button, footer .button, header .button{
+	font-size: 1.6vw;
+	padding: 10px 30px 10px 30px;
+	color: #E6DADA;
+	background-color: #EF3E3D;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	font-family: 'Raleway', sans-serif;
+	text-decoration: none;
+	
+}
+
+
+
+nav img{
+	height: 4vw;
+	
+}
+
+.attractionsdrop:hover .dropdown-content {
+	display: block;
+}
+
+.infodrop:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background-color:transparent;
+	text-align: center;
+	border-radius: 8px;
+	
+	
+
+}
+
+.dropdown-content a{
+	
+}
+
+.tan{
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	background-color: #E6DADA;
+	border-radius: 0px 0px 8px 8px;
+}
+
+nav a{
+	color: #32C5F4;
+	text-decoration: none;
+	margin: 0px 4vw 0px 4vw;
+}
+
+nav a:hover{
+	color: #EF3E3D;
+}
+
+.attractionsdrop, .infodrop{
+	position: relative;
+	display: inline-block;
+	text-align: center;
+
+	
+}
+
+#red{
+	height: 1.2vw;
+	background-color:#EF3E3D;
+	border-radius: 8px 8px 0px 0px;
+	
+}
+
+.triangle {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #EF3E3D;
+  margin: 0 auto;
+  
+}
+
+main{
+	text-align: center;
+}
+
+.weatherwidget-io{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	height: 10%;
+	
+}
+
+
+
+
+
+/*FOOTER*/
+
+footer{
+	text-align: center;
+	background-color:#185f76;
+	height: auto;
+	padding: 10px;
+	color: #e6dada;
+	font-weight: normal;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 1.3vw;
+	margin: 0 auto;
+}
+
+.socials{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width:100%; 
+
+}
+
+footer img{
+	height: 5vw;
+}
+
+#footertext{
+	text-align: right;
+}
+
+footer .button{
+	margin: 20px;
+}
+
+/* footer img{
+	padding: 0px 2vw 0px 2vw;
+} */
