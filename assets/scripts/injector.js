@@ -28,6 +28,18 @@ nav{
 	justify-content: space-between;
 	align-items: center;
 	width:100%;
+	z-index:9999;
+}
+
+.navbutt{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbutt a{
+	margin-right: 40px;
+	margin-left: 0px;
 }
 
 nav .button, footer .button, header .button{
@@ -154,11 +166,12 @@ nav .button:hover{
                 </div>
             </div>
     </div>
-        
+		
+	<div class="navbutt">
     <a class="button"  href="login.html">Login</a>
         
     <a class="button"  href="register.html">Register</a>
-    
+    </div>
     
 </nav>
 </template>
