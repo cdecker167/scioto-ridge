@@ -154,7 +154,7 @@ nav .button:hover{
     </div>
     
     <div class="infodrop">	
-        <a href="">Info</a>
+        <a href="info.html">Info</a>
             <div class="dropdown-content">
                 <div class="triangle"> </div>
                 <div id="red"> </div>
@@ -224,7 +224,7 @@ footer{
 	align-items: center;
 	font-size: 1.3vw;
 	margin: 0 auto;
-	
+	max-height: 10%;
 }
 
 .socials{
