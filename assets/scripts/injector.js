@@ -224,6 +224,7 @@ footer{
 	align-items: center;
 	font-size: 1.3vw;
 	margin: 0 auto;
+	
 }
 
 .socials{
