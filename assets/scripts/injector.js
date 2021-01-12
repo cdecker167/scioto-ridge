@@ -29,6 +29,7 @@ nav{
 	align-items: center;
 	width:100%;
 	z-index:9999;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .navbutt{
@@ -82,9 +83,6 @@ nav img{
 
 }
 
-.dropdown-content a{
-	
-}
 
 .tan{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -140,7 +138,7 @@ nav .button:hover{
     <a href="reserve.html">Reserve</a>	
             
     <div class="attractionsdrop">	
-        <a href="">Attractions</a>
+        <a href="attractions.html">Attractions</a>
             <div class="dropdown-content">
                 <div class="triangle"> </div>
                 <div id="red"> </div>

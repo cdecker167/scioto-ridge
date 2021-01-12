@@ -19,6 +19,10 @@ h1{
 	
 }
 
+img{
+	width: 100%;
+}
+
 body{
 	margin: 0 auto;
 }
@@ -79,6 +83,28 @@ select {
 	font-size: 1.5vw;
 }
 
+.boxes{
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.popbox{
+	background-color: #E6DADA;
+	border-radius: 10px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	text-align: center;
+	color: var(--blue);
+	max-width: 25%;
+	margin: 5%;
+
+}
+
+.attractbutt{
+	display: flex;
+	justify-content: center;
+}
+
 
 /*NAV BAR*/
 
@@ -100,5 +126,6 @@ nav-bar{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
+	margin: 10px;
 	
 }
