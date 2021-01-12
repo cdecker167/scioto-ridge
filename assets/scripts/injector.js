@@ -28,6 +28,19 @@ nav{
 	justify-content: space-between;
 	align-items: center;
 	width:100%;
+	z-index:9999;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.navbutt{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbutt a{
+	margin-right: 40px;
+	margin-left: 0px;
 }
 
 nav .button, footer .button, header .button{
@@ -70,9 +83,6 @@ nav img{
 
 }
 
-.dropdown-content a{
-	
-}
 
 .tan{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -128,7 +138,7 @@ nav .button:hover{
     <a href="reserve.html">Reserve</a>	
             
     <div class="attractionsdrop">	
-        <a href="">Attractions</a>
+        <a href="attractions.html">Attractions</a>
             <div class="dropdown-content">
                 <div class="triangle"> </div>
                 <div id="red"> </div>
@@ -142,7 +152,7 @@ nav .button:hover{
     </div>
     
     <div class="infodrop">	
-        <a href="">Info</a>
+        <a href="info.html">Info</a>
             <div class="dropdown-content">
                 <div class="triangle"> </div>
                 <div id="red"> </div>
@@ -154,11 +164,12 @@ nav .button:hover{
                 </div>
             </div>
     </div>
-        
+		
+	<div class="navbutt">
     <a class="button"  href="login.html">Login</a>
         
     <a class="button"  href="register.html">Register</a>
-    
+    </div>
     
 </nav>
 </template>
@@ -211,6 +222,7 @@ footer{
 	align-items: center;
 	font-size: 1.3vw;
 	margin: 0 auto;
+	max-height: 10%;
 }
 
 .socials{
