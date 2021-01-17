@@ -21,14 +21,13 @@ nav{
 	margin: 0 auto;
 	height:auto; 
 	background-color:#E6DADA;
-	font-size: 1.4vw;
+	font-size: calc(10px + 1vw);
 	vertical-align: middle;
 	padding: 16px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width:100%;
-	z-index:9999;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -45,7 +44,7 @@ nav{
 
 nav .button, footer .button, header .button{
 	font-size: 1.6vw;
-	padding: 10px 30px 10px 30px;
+	padding:  calc(5px + .3vw) calc(15px + .75vw);
 	color: #E6DADA;
 	background-color: #EF3E3D;
 	border: none;
@@ -59,7 +58,7 @@ nav .button, footer .button, header .button{
 
 
 nav img{
-	height: 4vw;
+	height: calc(30px + 2vw);
 	
 }
 
@@ -196,7 +195,7 @@ h1{
 
 footer .button{
 	font-size: 1.6vw;
-	padding: 10px 30px 10px 30px;
+	padding: calc(5px + .5vw) calc(15px + 1vw);
 	color: #E6DADA;
 	background-color: #EF3E3D;
 	border: none;
@@ -252,9 +251,6 @@ footer img{
 	text-align: right;
 }
 
-footer .button{
-	margin: 20px;
-}
 
 /* footer img{
 	padding: 0px 2vw 0px 2vw;
