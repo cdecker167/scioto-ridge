@@ -130,6 +130,9 @@ nav .button:hover{
 
 </style>
 <nav>
+
+
+
     <a href="index.html"> <img src="assets/images/logo3-02.png" /> </a>
     
     
@@ -252,11 +255,13 @@ footer img{
 }
 
 
-/* footer img{
-	padding: 0px 2vw 0px 2vw;
+
 </style>
 
 <footer>
+
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
 
 <div id="footertext"> 
@@ -267,6 +272,12 @@ footer img{
 
 
 <div class="foot-right">
+
+<form style="margin-bottom: 20px" action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+
     <a class="button"  href="login.html">Login</a>
         
     <a class="button"  href="register.html">Register</a>
@@ -278,9 +289,13 @@ footer img{
         <a href=""><img src ="assets/images/foot2.png"></a>
         <a href=""><img src ="assets/images/foot3.png"></a>
         <a href=""><img src ="assets/images/foot4.png"></a>
-    </div>
+	</div>
+	
+	
     
-	<p> &copy 2020 High Thrills Entertainment, LLC </p>
+  
+    
+	<p> &copy 2021 High Thrills Entertainment, LLC </p>
 	
 </div>
 
