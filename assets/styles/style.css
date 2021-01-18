@@ -44,7 +44,7 @@ header{
 
 header .button{
 	
-	margin: 0px 10vw 15vw 10vw;
+	margin: 0px 10vw 10vw 10vw;
 }
 
 header p{
@@ -137,7 +137,7 @@ nav-bar{
 }
 
 .container{
-	height:116px;
+	height: calc(62px + 2vw);
 }
 
 .button{
