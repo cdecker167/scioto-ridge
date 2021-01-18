@@ -9,6 +9,7 @@ html{
 	
 	font-family: 'Raleway', sans-serif;
 	/*font-weight: bold;*/
+	scroll-behavior: smooth;
 }
 
 h1{
@@ -70,9 +71,9 @@ header p{
 }
 
 video{
-	/* margin-top: -100px; */
+	
 	width: 100%;
-	height: 100vh;
+	
 }
 
 .textbox{
@@ -92,6 +93,10 @@ select {
 	width: 17vw;
 	font-family: 'Raleway';
 	font-size: 1.5vw;
+}
+
+#reserve{
+	padding-top: 120px;
 }
 
 .boxes{
@@ -148,3 +153,25 @@ nav-bar{
 	margin: 10px;
 	
 }
+
+a{
+	text-decoration: none;
+}
+
+.chevron{
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 2em;
+	left: 0.15em;
+	position: relative;
+	vertical-align: top;
+	width: 2em;
+	top: 0;
+	transform: rotate(135deg);
+	color: var(--tan);
+	
+}
+
+
