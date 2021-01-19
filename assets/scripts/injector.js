@@ -134,17 +134,40 @@ nav .button:hover{
   
 }
 
+#burger{
+	display: none;
+	color: #32C5F4;
+	font-size: 40px;
+	z-index: 12;
+	margin-right: 15px;
+}
+
+#responsive{
+	display: none;
+}
+
+@media screen and (max-width: 800px) {
+	.links{
+		display: none;
+	}
+
+	#burger{
+		display: block;
+		z-index: 5;
+	}
+  }
+
 </style>
 <nav>
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <a href="index.html"> <img src="assets/images/logo3-02.png" /> </a>
     
     <div class='links'>
 
     <a href="reserve.html">Reserve</a>	
-            
+	
     <div class="attractionsdrop">	
         <a href="attractions.html">Attractions</a>
             <div class="dropdown-content">
@@ -179,8 +202,29 @@ nav .button:hover{
     <a class="button"  href="register.html">Register</a>
     </div>
 	</div>
+
+	<div onclick='burgFunc()' id='burger'>
+		<a id="burg" onclick='burgFunc()'><i onclick='burgFunc()' class='fa fa-bars'></i></a>
+			<div id='responsive'>
+				<a href="reserve.html">Reserve</a>	
+				<a href="attractions.html">Attractions</a>
+				<a href="info.html">Info</a>
+				<a href="register.html">Register</a>
+			</div>
+	</div>
+
+	<script>
+
+		  function burgFunc() {
+			  document.getElementById("responsive").style.display = "block";
+		  }
+
+	</script>
 	
 </nav>
+
+	
+
 </template>
 
 <template id='footer-template'>
@@ -291,7 +335,6 @@ button{
 	.foot-left{
 		display: none;
 	}
-
 	footer{
 		grid-template-columns: 50% 50%;
 	}

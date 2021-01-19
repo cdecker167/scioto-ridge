@@ -149,7 +149,7 @@ nav-bar{
 
 .button{
 	font-size: 1.6vw;
-	padding: calc(3px + .1vw) calc(10px + .25vw);
+	padding: calc(4px + .1vw) calc(15px + .25vw);
 	color: #E6DADA;
 	background-color: #EF3E3D;
 	border: none;
