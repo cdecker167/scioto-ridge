@@ -26,9 +26,15 @@ nav{
 	padding: 16px;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	width:100%;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 2;
+}
+
+.links{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .navbutt{
@@ -73,7 +79,7 @@ nav img{
 .dropdown-content {
 	display: none;
 	position: absolute;
-	z-index: 1;
+	/* z-index: 1; */
 	background-color:transparent;
 	text-align: center;
 	border-radius: 8px;
@@ -135,7 +141,7 @@ nav .button:hover{
 
     <a href="index.html"> <img src="assets/images/logo3-02.png" /> </a>
     
-    
+    <div class='links'>
 
     <a href="reserve.html">Reserve</a>	
             
@@ -145,8 +151,8 @@ nav .button:hover{
                 <div class="triangle"> </div>
                 <div id="red"> </div>
                 <div class="tan">
-                    <a href="reserve.html">Rides</a>
-                    <a href="reserve.html">Resturaunts</a>
+                    <a href="attractions.html#rides">Rides</a>
+                    <a href="attractions.html#restaurants">Resturaunts</a>
                     <a href="reserve.html">Shows</a>
                     <a href="reserve.html">Reviews</a>
                 </div>
@@ -172,18 +178,13 @@ nav .button:hover{
         
     <a class="button"  href="register.html">Register</a>
     </div>
-    
+	</div>
+	
 </nav>
 </template>
 
 <template id='footer-template'>
 <style>
-:root {
-	--red: #EF3E3D;
-	--blue: #32C5F4;
-	--tan: #E6DADA;
-	--navy: #185f76;
-}
 
 html{
 	
@@ -197,8 +198,8 @@ h1{
 }
 
 footer .button{
-	font-size: 1.6vw;
-	padding: calc(5px + .5vw) calc(15px + 1vw);
+	font-size: 20px;
+	padding: 15px 30px;
 	color: #E6DADA;
 	background-color: #EF3E3D;
 	border: none;
@@ -219,68 +220,124 @@ footer{
 	padding: 20px;
 	color: #e6dada;
 	font-weight: normal;
-	display: flex;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
 	align-items: center;
-	font-size: 1.3vw;
+	font-size: 15px;
 	margin: 0 auto;
 	max-height: 10%;
 }
 
 .socials{
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	width:100%; 
+	 
 
 }
 
 footer img{
-	height: 5vw;
+	height: 85px;
 }
 
 .socials img{
-	height: 4vw;
+	height: 40px;
 	width: auto;
-	margin: 1vw;
+	margin: 20px;
 	max-height: 100px;
+	
 }
 
 .foot-right{
 	
+	text-align: center;
+}
+
+.foot-left{
+	justify-content: center;
+	display:flex;
 }
 
 #footertext{
 	text-align: right;
+	
+	
+	
 }
 
+.foot-middle{
+	
+	
+	text-align: center;
+}
+
+.footbutt{
+	display: flex;
+	justify-content: center;
+}
+
+input {
+	height: 30px;
+	background-color: #E6DADA;
+
+}
+button{
+	width: 50px;
+	height: 35px
+	
+}
+
+@media screen and (max-width: 1050px) {
+	.foot-left{
+		display: none;
+	}
+
+	footer{
+		grid-template-columns: 50% 50%;
+	}
+  }
+
+  @media screen and (max-width: 700px) {
+	.foot-left{
+		display: none;
+	}
+
+	.foot-middle{
+		display: none;
+	}
+
+	footer{
+		grid-template-columns: 100%;
+	}
+  }
 
 
 </style>
 
 <footer>
 
-<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+<div class='foot-left'>
 <div id="footertext"> 
-<img src="assets/images/logo3-02.png" />
+<a href='index.html'><img src="assets/images/logo3-02.png" /></a>
 <p> <em>11684 Canterbury Ave NW <br/> Pickerington, OH <br/> Ruby's House </em></p>
 </div>
+</div>
 
+<div class='foot-middle'>
 
+<div class='footbutt'>
+	<a class="button"  href="login.html">Login</a>
+	<a class="button"  href="register.html">Register</a>
+</div>
+	<form style="margin-top: 30px; height: 50px;" action="">
+	<input style='border-radius: 6px; border-color: #32C5F4;'type="text" placeholder="Search Scioto Ridge" name="search">
+	<button style='background-color: #32C5F4; border-radius: 8px; border-color: #32C5F4;' type="submit"><i class="fa fa-search"></i></button>
+	</form>
+</div>
 
 <div class="foot-right">
-
-<form style="margin-bottom: 20px" action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-
-    <a class="button"  href="login.html">Login</a>
-        
-    <a class="button"  href="register.html">Register</a>
     
     <p> <em> Follow Us </em> </p>
 
