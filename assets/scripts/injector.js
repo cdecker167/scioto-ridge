@@ -161,6 +161,7 @@ nav .button:hover{
 <nav>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='assets/scripts/burger.js'></script>
 
     <a href="index.html"> <img src="assets/images/logo3-02.png" /> </a>
     
@@ -203,8 +204,8 @@ nav .button:hover{
     </div>
 	</div>
 
-	<div onclick='burgFunc()' id='burger'>
-		<a id="burg" onclick='burgFunc()'><i onclick='burgFunc()' class='fa fa-bars'></i></a>
+	<div onclick='burgFunc()'id='burger'>
+		<a id="burg"><i class='fa fa-bars'></i></a>
 			<div id='responsive'>
 				<a href="reserve.html">Reserve</a>	
 				<a href="attractions.html">Attractions</a>
@@ -213,13 +214,7 @@ nav .button:hover{
 			</div>
 	</div>
 
-	<script>
-
-		  function burgFunc() {
-			  document.getElementById("responsive").style.display = "block";
-		  }
-
-	</script>
+	
 	
 </nav>
 
@@ -270,6 +265,9 @@ footer{
 	font-size: 15px;
 	margin: 0 auto;
 	max-height: 10%;
+	
+	bottom:0;
+	left:0;
 }
 
 .socials{
@@ -428,8 +426,11 @@ class NavClass extends HTMLElement {
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
     connectedCallback() {
-        console.log('connected!');
-    }
+		
+		
+	}
+	
+
 }
 
 class FooterClass extends HTMLElement {
