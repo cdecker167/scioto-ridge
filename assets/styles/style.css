@@ -9,7 +9,9 @@ html{
 	
 	font-family: 'Raleway', sans-serif;
 	/*font-weight: bold;*/
+	scroll-behavior: smooth;
 }
+
 
 h1{
 	color: #32C5F4;
@@ -25,20 +27,26 @@ img{
 
 body{
 	margin: 0 auto;
+	text-align: center;
 }
 
 header{
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coaster1.jpg");
-	height: 50%;
+	
+	height: 90vh;
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
 	color: #e6dada;
 }
 
+.headercontent{
+	padding: 5% 0% 15% 0%;
+}
+
 header .button{
 	
-	margin: 0px 10% 25% 10%;
+	margin: 0px 10vw 10% 10vw;
 }
 
 header p{
@@ -64,6 +72,12 @@ header p{
 	color: var(--blue);
 }
 
+video{
+	z-index: -100;
+	width: 100%;
+	
+}
+
 .textbox{
 	border-radius: 6px;
 	border-color:#32C5F4;
@@ -83,9 +97,14 @@ select {
 	font-size: 1.5vw;
 }
 
-.boxes{
+#reserve{
+	padding-top: 120px;
+}
+
+.rides, .restaurants{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 
 }
 
@@ -95,14 +114,26 @@ select {
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 	text-align: center;
 	color: var(--blue);
-	max-width: 25%;
-	margin: 5%;
+	width: 250px;
+	margin: 2%;
+	text-decoration: none;
 
+}
+
+.rides h2, .restaurants h2{
+	color: var(--blue);
 }
 
 .attractbutt{
 	display: flex;
 	justify-content: center;
+}
+
+.weatherwidget-io{
+	width: 60%;
+	margin: 30px auto;
+	font-size: 50px;
+	
 }
 
 
@@ -113,12 +144,12 @@ nav-bar{
 }
 
 .container{
-	height:116px;
+	height: calc(62px + 2vw);
 }
 
 .button{
 	font-size: 1.6vw;
-	padding: 10px 30px 10px 30px;
+	padding: calc(4px + .1vw) calc(15px + .25vw);
 	color: #E6DADA;
 	background-color: #EF3E3D;
 	border: none;
@@ -129,3 +160,50 @@ nav-bar{
 	margin: 10px;
 	
 }
+
+a{
+	text-decoration: none;
+}
+
+.chevron{
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 2em;
+	left: 0.15em;
+	position: relative;
+	vertical-align: top;
+	width: 2em;
+	top: 0;
+	transform: rotate(135deg);
+	color: var(--tan);
+	
+}
+
+.modal{
+	background-color: #E6DADA;
+	border-radius: 10px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	text-align: center;
+	color: var(--blue);
+	width: 50%;
+	margin: 20px;
+	padding:20px;
+	height: auto;
+}
+
+.modal img{
+	width: 50%;
+}
+
+#desc{
+	text-align: left;
+}
+
+.modal-top{
+	display: flex;
+	justify-content: space-around;
+}
+
+
