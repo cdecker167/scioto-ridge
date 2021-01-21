@@ -214,7 +214,15 @@ nav .button:hover{
 	<script>
 
 		  function burgFunc() {
-			  document.getElementById("responsive").style.display = "block";
+			  
+			var exists = document.getElementById("responsive");
+			
+			if (exists.style.display == 'none'){
+				exists.style.display = "block";
+			}
+			else{
+				exists.style.display = "none";
+			}
 		  }
 
 	</script>

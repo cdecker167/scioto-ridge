@@ -120,6 +120,11 @@ select {
 
 }
 
+.popbox img{
+	height: 60%;
+	
+}
+
 .rides h2, .restaurants h2{
 	color: var(--blue);
 }
