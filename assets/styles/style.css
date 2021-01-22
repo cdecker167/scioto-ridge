@@ -211,4 +211,53 @@ a{
 	justify-content: space-around;
 }
 
+.adminbox{
+	background-color: var(--tan);
+    border-color: var(--navy);
+    border-radius: 25px;
+    border-style: solid;
+    width: 60%;
+	margin: 20px auto;	
+	display: grid;
+	grid-template-columns: 30% 70%;	
+	color: black;		
+}
+
+.admin-right{
+	border-left: solid var(--navy) ;
+}
+.adminbox h1{
+	text-decoration: underline;
+}
+
+.adminbox label{
+	font-size: 21px;
+	font-weight: bold;
+	color: var(--blue);
+}
+
+.adminbox p{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+ul{
+	text-decoration: none;
+	list-style: none;
+}
+
+li{
+	margin: 15px;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+li:hover{
+	color: var(--blue);
+}
+
+#waittime{
+	width: 50px;
+}
+
 
