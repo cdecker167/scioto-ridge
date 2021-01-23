@@ -5,7 +5,7 @@
 	--navy: #185f76;
 }
 
-html{
+html, pre{
 	
 	font-family: 'Raleway', sans-serif;
 	/*font-weight: bold;*/
@@ -277,4 +277,9 @@ li:hover{
 
 .team .popbox{
 	
+}
+
+.infogrid{
+	display: grid;
+	grid-template-columns: 60% 40%;
 }
