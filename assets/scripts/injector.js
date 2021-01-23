@@ -189,7 +189,7 @@ nav .button:hover{
     
 		
 	<div class="navbutt">
-    <a class="button"  href="login.html">Login</a>
+    <a class="button"  id='login-button' href="login.html">Login</a>
         
     <a class="button"  href="register.html">Register</a>
     </div>
@@ -359,8 +359,8 @@ button{
 <div class='foot-middle'>
 
 <div class='footbutt'>
-	<a class="button"  href="login.html">Login</a>
-	<a class="button"  href="register.html">Register</a>
+	<a class="button" id='login-button' href="login.html">Login</a>
+	<a class="button" id='register-button' href="register.html">Register</a>
 </div>
 	<form style="margin-top: 30px; height: 50px;" action="">
 	<input style='border-radius: 6px; border-color: #32C5F4;'type="text" placeholder="Search Scioto Ridge" name="search">
