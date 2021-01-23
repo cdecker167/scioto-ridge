@@ -3,5 +3,22 @@
     display: none;
 }
 .active {
-    display: block !important;
+    display: block;
+}
+input:invalid {
+    border: 1px solid red;
+}
+input:disabled {
+    background-color: #696969;
+}
+.error-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error { 
+    background-color: red;
+    padding: 1em;
+    border-radius: 1em;
+    display: none;
 }
