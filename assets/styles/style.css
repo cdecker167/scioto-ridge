@@ -141,6 +141,11 @@ select {
 	
 }
 
+.mapdiv{
+	display: flex;
+	justify-content: center;
+}
+
 
 /*NAV BAR*/
 
@@ -260,4 +265,14 @@ li:hover{
 	width: 50px;
 }
 
+.team{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 40%;
+	margin: 0 auto;
+}
 
+.team .popbox{
+	
+}

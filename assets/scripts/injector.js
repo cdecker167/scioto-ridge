@@ -183,19 +183,10 @@ nav .button:hover{
             </div>
     </div>
     
-    <div class="infodrop">	
+    	
         <a href="info.html">Info</a>
-            <div class="dropdown-content">
-                <div class="triangle"> </div>
-                <div id="red"> </div>
-                <div class="tan">
-                    <a href="reserve.html">Park Map</a>
-                    <a href="reserve.html">Directions</a>
-                    <a href="reserve.html">ParkHours</a>
-                    <a href="reserve.html">Weather</a>
-                </div>
-            </div>
-    </div>
+            
+    
 		
 	<div class="navbutt">
     <a class="button"  href="login.html">Login</a>
@@ -265,7 +256,6 @@ footer{
 	font-size: 15px;
 	margin: 0 auto;
 	max-height: 10%;
-	
 	bottom:0;
 	left:0;
 }
