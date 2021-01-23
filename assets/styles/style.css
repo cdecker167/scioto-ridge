@@ -28,6 +28,8 @@ img{
 body{
 	margin: 0 auto;
 	text-align: center;
+	position: relative;
+  	min-height: 100vh;
 }
 
 header{
