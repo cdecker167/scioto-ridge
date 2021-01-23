@@ -255,9 +255,9 @@ footer{
 	align-items: center;
 	font-size: 15px;
 	margin: 0 auto;
-	max-height: 10%;
 	bottom:0;
-	left:0;
+	
+	
 }
 
 .socials{
@@ -352,7 +352,7 @@ button{
 <div class='foot-left'>
 <div id="footertext"> 
 <a href='index.html'><img src="assets/images/logo3-02.png" /></a>
-<p> <em>11684 Canterbury Ave NW <br/> Pickerington, OH <br/> Ruby's House </em></p>
+<p> <em>7800 Refugee Road<br/> Pickerington, OH <br/> 43147 </em></p>
 </div>
 </div>
 
