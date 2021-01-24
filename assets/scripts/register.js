@@ -47,6 +47,7 @@ email.addEventListener('keyup' , () => {
 
 signUp.addEventListener('submit', event => {
     event.preventDefault();
+    button.disabled = true;
     API.post('/login/new', {
         fName: `${fName.value}`,
         lName: `${lName.value}`,
