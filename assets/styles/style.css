@@ -1,3 +1,5 @@
+/*  ALL HTML  */
+
 :root {
 	--red: #EF3E3D;
 	--blue: #32C5F4;
@@ -36,6 +38,56 @@ body{
   	min-height: 100vh;
 }
 
+video{
+	z-index: -100;
+	width: 100%;
+	
+}
+
+.container{
+	height: calc(62px + 2vw);
+}
+
+.button{
+	font-size: 18px;
+	padding: 10px 15px;
+	color: #E6DADA;
+	background-color: #EF3E3D;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	font-family: 'Raleway', sans-serif;
+	text-decoration: none;
+	margin: 10px;
+	
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.chevron{
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 2em;
+	left: 0.15em;
+	position: relative;
+	vertical-align: top;
+	width: 2em;
+	top: 0;
+	transform: rotate(135deg);
+	color: var(--tan);
+	
+}
+
+/*  HEADER  */
+
 header{
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coaster1.jpg");
 	
@@ -66,32 +118,21 @@ header p{
 	align-items: center;
 }
 
-.signup{
-	text-align:right;
-	margin: 0 43% 10% 23%;
-	color: var(--blue);
-}
+/*   HOME PAGE   */
 
-.reserve{
-	text-align: left;
-	margin: 0 25% 12% 42%; 
-	color: var(--blue);
-}
-
-video{
-	z-index: -100;
-	width: 100%;
+.weatherwidget-io{
+	width: 60%;
+	margin: 30px auto;
+	font-size: 50px;
 	
 }
 
-.textbox{
-	border-radius: 6px;
-	border-color:#32C5F4;
-	background-color: #E6DADA;
-	height: 2vw;
-	width: 15vw;
-	font-family: 'Raleway';
+.mapdiv{
+	display: flex;
+	justify-content: center;
 }
+
+/*RESERVE PAGE*/
 
 select {
 	border-radius: 6px;
@@ -106,6 +147,14 @@ select {
 #reserve{
 	padding-top: 120px;
 }
+
+.reserve{
+	text-align: left;
+	margin: 0 25% 12% 42%; 
+	color: var(--blue);
+}
+
+/*   ATTRACTIONS PAGE   */
 
 .rides, .restaurants{
 	display: flex;
@@ -132,6 +181,10 @@ select {
 	
 }
 
+.popbox a{
+	text-decoration: none;
+}
+
 .rides h2, .restaurants h2{
 	color: var(--blue);
 }
@@ -139,63 +192,6 @@ select {
 .attractbutt{
 	display: flex;
 	justify-content: center;
-}
-
-.weatherwidget-io{
-	width: 60%;
-	margin: 30px auto;
-	font-size: 50px;
-	
-}
-
-.mapdiv{
-	display: flex;
-	justify-content: center;
-}
-
-
-/*NAV BAR*/
-
-nav-bar{
-	display: block;
-}
-
-.container{
-	height: calc(62px + 2vw);
-}
-
-.button{
-	font-size: 18px;
-	padding: 10px 15px;
-	color: #E6DADA;
-	background-color: #EF3E3D;
-	border: none;
-	border-radius: 8px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-	font-family: 'Raleway', sans-serif;
-	text-decoration: none;
-	margin: 10px;
-	
-}
-
-a{
-	text-decoration: none;
-}
-
-.chevron{
-	border-style: solid;
-	border-width: 0.25em 0.25em 0 0;
-	content: '';
-	display: inline-block;
-	height: 2em;
-	left: 0.15em;
-	position: relative;
-	vertical-align: top;
-	width: 2em;
-	top: 0;
-	transform: rotate(135deg);
-	color: var(--tan);
-	
 }
 
 .modal{
@@ -222,6 +218,40 @@ a{
 	display: flex;
 	justify-content: space-around;
 }
+
+/*  REGISTER / LOGIN   */
+
+.signup{
+	text-align:right;
+	margin: 0 43% 10% 23%;
+	color: var(--blue);
+}
+
+.textbox{
+	border-radius: 6px;
+	border-color:#32C5F4;
+	background-color: #E6DADA;
+	height: 2vw;
+	width: 15vw;
+	font-family: 'Raleway';
+}
+
+/*   ABOUT / INFO   */
+
+.team{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.infogrid{
+	display: grid;
+	grid-template-columns: 60% 40%;
+}
+
+/*   ADMIN PAGES    */
 
 .adminbox{
 	background-color: var(--tan);
@@ -270,21 +300,4 @@ li:hover{
 
 #waittime{
 	width: 50px;
-}
-
-.team{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 40%;
-	margin: 0 auto;
-}
-
-.team .popbox{
-	
-}
-
-.infogrid{
-	display: grid;
-	grid-template-columns: 60% 40%;
 }
