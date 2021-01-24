@@ -21,6 +21,10 @@ h1{
 	
 }
 
+h2{
+	color: var(--red);
+}
+
 img{
 	width: 100%;
 }
@@ -119,6 +123,7 @@ select {
 	width: 250px;
 	margin: 2%;
 	text-decoration: none;
+	height: auto;
 
 }
 
@@ -160,8 +165,8 @@ nav-bar{
 }
 
 .button{
-	font-size: 1.6vw;
-	padding: calc(4px + .1vw) calc(15px + .25vw);
+	font-size: 18px;
+	padding: 10px 15px;
 	color: #E6DADA;
 	background-color: #EF3E3D;
 	border: none;
