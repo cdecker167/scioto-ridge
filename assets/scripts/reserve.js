@@ -9,15 +9,21 @@ const time = document.querySelector('#time');
 const size = document.querySelector('#size');
 const button = document.querySelector('#submit-button');
 const noLogin = document.querySelector('#not-logged-in');
+const postSubmit = document.querySelector('#post-submit');
+const code = document.querySelector('#code');
+const timeOptions = document.querySelectorAll('.time');
+const height = document.querySelector('#extra-height');
 
 const API = new Backend();
 API.setBaseUrl('http://127.0.0.1:5000');
 
 window.onload = () => {
+    postSubmit.style.display = 'none';
     API.get('/login/v')
     .then(response => {
         if (response.session == 'true') {
             noLogin.style.display = 'none';
+            height.style.display = 'none';
             loginButton.textContent = 'Profile';
             loginButton.setAttribute('href','profile.html');
             registerButton.textContent = 'Logout';
@@ -35,10 +41,21 @@ window.onload = () => {
         } else {
             reserveForm.style.display = 'none';
             noLogin.style.display = 'flex';
+            height.style.display = 'block';
         }
     })
     .catch(error => {
         reserveForm.style.display = 'none';
+        height.style.display = 'none';
+    })
+    API.get('/reserve/forbidden')
+    .then(response => {
+        const timesList = response.unavailableTimes;
+        timeOptions.forEach(option => {
+            if (timesList.includes(option.value)){
+                option.disabled = true;
+            }
+        });
     })
 }
 
@@ -60,7 +77,9 @@ reserveForm.addEventListener('submit', event => {
     })
     .then(response => {
         if (response.success == 'true') {
-           //TODO 
+           reserveForm.style.display = 'none';
+           postSubmit.style.display = 'flex';
+           code.textContent = `${response.confirmation}`;
         }
     })
 });

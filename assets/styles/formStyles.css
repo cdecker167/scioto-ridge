@@ -37,7 +37,23 @@ input:disabled {
 .text {
     font-family: raleway;
     font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
 }
 a, a:visited {
     color: var(--navy);
+}
+#post-submit {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#code {
+    font-size: 2em;
+    color: var(--rojo);
+}
+#extra-height {
+    height: 200px;
 }
