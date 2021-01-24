@@ -1,4 +1,6 @@
 import {Backend} from './backend.js';
+const registerButton = document.querySelector('nav-bar').shadowRoot.querySelector('#register-button');
+const footRegister = document.querySelector('footer-pro').shadowRoot.querySelector('#register-button');
 const signUp = document.querySelector('#signForm');
 const fName = document.querySelector('#fName');
 const lName = document.querySelector('#lName');
@@ -11,6 +13,12 @@ const passWarn = document.querySelector('#password-warning');
 const errorMes = document.querySelector('#error-message');
 const API = new Backend();
 API.setBaseUrl('http://127.0.0.1:5000');
+
+
+window.onload = () => {
+    registerButton.style.display = 'none';
+    footRegister.style.display = 'none';
+}
 
 signUp.addEventListener('keyup', () => {
     if (fName.value && lName.value && email.validity.valid && passwords[0].value === passwords[1].value && email.value && passwords[0].value) {
