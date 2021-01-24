@@ -191,7 +191,7 @@ nav .button:hover{
 	<div class="navbutt">
     <a class="button"  id='login-button' href="login.html">Login</a>
         
-    <a class="button"  href="register.html">Register</a>
+    <a class="button"  id='register-button' href="register.html">Register</a>
     </div>
 	</div>
 
