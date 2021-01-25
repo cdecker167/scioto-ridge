@@ -59,7 +59,7 @@ video{
 	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
 	margin: 10px;
-	
+	cursor: pointer;
 }
 
 a{
@@ -131,6 +131,23 @@ header p{
 	display: flex;
 	justify-content: center;
 }
+
+.mapdiv img{
+	width: 40%; height:40%; margin: 25px; border-radius: 25px;
+}
+
+@media screen and (max-width: 850px) {
+	.mapdiv > p{
+		display: none;
+	}
+	.mapdiv{
+		grid-template-columns: 100%;
+	}
+	.mapdiv img{
+		height: 90%;
+		width: 90%;
+	}
+  }
 
 /*RESERVE PAGE*/
 
@@ -329,3 +346,79 @@ li:hover{
 #waittime{
 	width: 50px;
 }
+
+/*    PROFILE PAGE     */
+
+.stars{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+  }
+
+  .stars .stary{
+	display: none;
+  }
+  .stars label{
+	font-size: 55px;
+	color: lightgrey;
+	margin: 0 5px;
+	text-shadow: 1px 1px #bbb;
+  }
+
+.onlystars{
+	transform: rotateY(180deg);
+}
+
+  .stars label:before{
+	content: '★';
+  }
+  .stars .stary:checked ~ label{
+	color: var(--red);
+	
+  }
+  .stars:not(:checked) > .onlystars label:hover,
+  .stars:not(:checked) > .onlystars label:hover ~ label{
+	color: var(--red);
+	cursor: pointer;
+  }
+  .stars .stary:checked > .onlystars label:hover,
+  .stars .stary:checked > .onlystars label:hover ~ label{
+	color: var(--red);
+	cursor: pointer;
+  }
+  .stars .result:before{
+	content: "";
+	font-size: 30px;
+	font-weight: 500;
+	color: var(--red);
+	font-family: 'Poppins', sans-serif;
+	display: none;
+  }
+  .stars .stary:checked ~ .result:before{
+	display: block;
+  }
+
+	table{
+	  background-color: var(--tan);
+	  color: var(--blue);
+	  text-align: center;
+	  border-collapse: collapse;
+	  margin: 0 auto;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+  }
+
+  th{
+	  background-color: var(--navy);
+	  color: white;
+	  font-size: 1.5em;
+	  font-weight: normal;
+	  padding: 12px;
+	  
+  }
+
+  td{
+	  border: solid var(--navy);
+	  border-width: 2px;
+	  padding: 8px;
+	  font-weight: bold;
+  }

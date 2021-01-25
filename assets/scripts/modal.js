@@ -1,5 +1,5 @@
 function xclose(){
-    for (i=0; i<17; i++){
+    for (let i=0; i<17; i++){
         document.getElementsByClassName('modal')[i].style.display = 'none';
     }
 }
