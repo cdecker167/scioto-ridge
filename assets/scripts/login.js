@@ -37,6 +37,7 @@ loginForm.addEventListener('keyup', () => {
 
 loginForm.addEventListener('submit', event => {
     event.preventDefault();
+    submitButton.disabled = true;
     API.post('/login', {
         email: `${email.value}`,
         pass: `${password.value}`

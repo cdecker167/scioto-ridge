@@ -4,6 +4,7 @@
 		<link rel="icon" type="image/png" href="assets/images/favicon.png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="assets/styles/style.css" rel="stylesheet">
+		<link rel='stylesheet' type='text/css' href='assets/styles/formStyles.css'>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		
@@ -28,32 +29,33 @@
 	<video autoplay  muted >
 		<source src="assets\images\SciotoRidgeBumper.mp4" type="video/mp4" />
 	</video>
-
+	<div id='reserve-form'>
 	<a href="#reserve"><div  style='margin-top: -150px; color: var(--blue);'class="chevron"></div></a>
 	
 		<h1 id='reserve'>Reserve</h1>
 
-		<form class="reserve" action="">
+		<form class="reserve" id='reserve-form' action="">
 			<label for="cars">Attraction:</label> 
 			<br>
 			<select name="attraction" id="attraction">
-			  <option value="">Roller Coaster</option>
-			  <option value="">Ferris Wheel</option>
-			  <option value="">Swings</option>
-			  <option value="">Rocket Ship</option>
-			  <option value="">Sling Shot</option>
-			  <option value="">Haunted Castle Ride</option>
-			  <option value="">Parachute Drop</option>
-			  <option value="">Merry-Go-Round</option>
-			  <option value="">Antique Cars</option>
-			  <option value="">Cage Ride</option>
-			  <option value="">Train</option>
-			  <option value="">Boats</option>
-			  <option value="">Chuck Wagon</option>
-			  <option value="">Dogs To Go</option>
-			  <option value="">Chickens-R-Us</option>
-			  <option value="">Easy As Pie Diner</option>
-			  <option value="">Forever Cool Ice Cream</option>
+			  <option value="false"></option>	
+			  <option value="1">Roller Coaster</option>
+			  <option value="2">Ferris Wheel</option>
+			  <option value="3">Swings</option>
+			  <option value="4">Rocket Ship</option>
+			  <option value="5">Sling Shot</option>
+			  <option value="6">Haunted Castle Ride</option>
+			  <option value="7">Parachute Drop</option>
+			  <option value="8">Merry-Go-Round</option>
+			  <option value="9">Antique Cars</option>
+			  <option value="10">Cage Ride</option>
+			  <option value="11">Train</option>
+			  <option value="12">Boats</option>
+			  <option value="13">Chuck Wagon</option>
+			  <option value="14">Dogs To Go</option>
+			  <option value="15">Chickens-R-Us</option>
+			  <option value="16">Easy As Pie Diner</option>
+			  <option value="17">Forever Cool Ice Cream</option>
 
 
 			</select>
@@ -64,30 +66,96 @@
 			<label for="time">Time:</label>
 			<br>
 			<select name="time" id="time">
-			  <option value="">Ride1</option>
-			  <option value="">Ride2</option>
-			  <option value="">Ride3</option>
-			  <option value="">Ride4</option>
+			  <option value="false"></option>
+			  <option value="11:00" class="time">11:00</option>
+			  <option value="11:10" class="time">11:10</option>
+			  <option value="11:20" class="time">11:20</option>
+			  <option value="11:30" class="time">11:30</option>
+			  <option value="11:40" class="time">11:40</option>
+			  <option value="11:50" class="time">11:50</option>
+			  <option value="12:00" class="time">12:00</option>
+			  <option value="12:10" class="time">12:10</option>
+			  <option value="12:20" class="time">12:20</option>
+			  <option value="12:30" class="time">12:30</option>
+			  <option value="12:40" class="time">12:40</option>
+			  <option value="12:50" class="time">12:50</option>
+			  <option value="1:00" class="time">1:00</option>
+			  <option value="1:10" class="time">1:10</option>
+			  <option value="1:20" class="time">1:20</option>
+			  <option value="1:30" class="time">1:30</option>
+			  <option value="1:40" class="time">1:40</option>
+			  <option value="1:50" class="time">1:50</option>
+			  <option value="2:00" class="time">2:00</option>
+			  <option value="2:10" class="time">2:10</option>
+			  <option value="2:20" class="time">2:20</option>
+			  <option value="2:30" class="time">2:30</option>
+			  <option value="2:40" class="time">2:40</option>
+			  <option value="2:50" class="time">2:50</option>
+			  <option value="3:00" class="time">3:00</option>
+			  <option value="3:10" class="time">3:10</option>
+			  <option value="3:20" class="time">3:20</option>
+			  <option value="3:30" class="time">3:30</option>
+			  <option value="3:40" class="time">3:40</option>
+			  <option value="3:50" class="time">3:50</option>
+			  <option value="4:00" class="time">4:00</option>
+			  <option value="4:10" class="time">4:10</option>
+			  <option value="4:20" class="time">4:20</option>
+			  <option value="4:30" class="time">4:30</option>
+			  <option value="4:40" class="time">4:40</option>
+			  <option value="4:50" class="time">4:50</option>
+			  <option value="5:00" class="time">5:00</option>
+			  <option value="6:00" class="time">6:00</option>
+			  <option value="6:10" class="time">6:10</option>
+			  <option value="6:20" class="time">6:20</option>
+			  <option value="6:30" class="time">6:30</option>
+			  <option value="6:40" class="time">6:40</option>
+			  <option value="6:50" class="time">6:50</option>
+			  <option value="7:00" class="time">7:00</option>
+			  <option value="7:10" class="time">7:10</option>
+			  <option value="7:20" class="time">7:20</option>
+			  <option value="7:30" class="time">7:30</option>
+			  <option value="7:40" class="time">7:40</option>
+			  <option value="7:50" class="time">7:50</option>
+			  <option value="8:00" class="time">8:00</option>
+			  <option value="8:10" class="time">8:10</option>
+			  <option value="8:20" class="time">8:20</option>
+			  <option value="8:30" class="time">8:30</option>
 			</select>
 	
 		  <br><br>
 
 		  
-			<label for="cars">Group Size:</label>
+			<label for="size">Group Size:</label>
 			<br>
-			<select name="attraction" id="attraction">
-			  <option value="">1-2</option>
-			  <option value="">3-4</option>
-			  <option value="">5-6</option>
-			  <option value="">6+</option>
+			<select name="size" id="size">
+			  <option value="false"></option>
+			  <option value="Small">1-2</option>
+			  <option value="Medium">3-4</option>
+			  <option value="Large">5-6</option>
+			  <option value="Xtra Large">6+</option>
 			</select>
 			<br><br>
 
-			<input class="button" type="submit" value="Submit">
+			<input class="button" id = 'submit-button' type="submit" value="Submit" disabled>
 		  </form>
+	</div>
+	<div id='not-logged-in'>
+		<h1>Not Logged In</h1>
+		<p class='text'>Please <a href='login.html'>Log In</a> or <a href='register.html'>Create an Account</a>, then come back here to reserve your spot!</p>
+		<p class='text'>We use an account system to minimize fraudulent reservations, and to ensure accurate reporting across our internal reservation system. This helps us deliver the high-quality experience that our guests expect, each and every day.</p>
+	</div>
+	<div id='post-submit'>
+		<h1>Success!</h1>
+		<p class='text'>Your confirmation code is: <span id='code'>INSERT CODE HERE</span></p>
+		<p class='text'>Show up to the attraction at your selected time, and present your confirmation code to the attendant.</p>
+		<p class='text'>In the meantime, you can <a href='reserve.html'>Submit Another Reservation</a> or <a href='index.html'>Go Back Home</a>.</p>
+	</div>
+	<div id='extra-height'>
 		
+	</div>
 	<footer-pro></footer-pro>
-
+	<!--Scripts-->
+	<script src='assets/scripts/reserve.js' type='module'></script>
     </body>
 
 </html>

@@ -1,3 +1,8 @@
+:root {
+    --navy: #185f76;
+    --rojo: #ef3e3d;
+    --light_blue: #32c5f4;
+}
 .warning {
     color: red;
     display: none;
@@ -21,4 +26,34 @@ input:disabled {
     padding: 1em;
     border-radius: 1em;
     display: none;
+}
+#not-logged-in {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text {
+    font-family: raleway;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+}
+a, a:visited {
+    color: var(--navy);
+}
+#post-submit {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#code {
+    font-size: 2em;
+    color: var(--rojo);
+}
+#extra-height {
+    height: 200px;
 }
