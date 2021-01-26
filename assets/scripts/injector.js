@@ -177,8 +177,7 @@ nav .button:hover{
                 <div class="tan">
                     <a href="attractions.html#rides">Rides</a>
                     <a href="attractions.html#restaurants">Resturaunts</a>
-                    <a href="reserve.html">Shows</a>
-                    <a href="reserve.html">Reviews</a>
+                    <a href="attractions.html#shows">Shows</a>
                 </div>
             </div>
     </div>
@@ -373,10 +372,10 @@ button{
     <p> <em> Follow Us </em> </p>
 
     <div class="socials">
-        <a href=""><img src ="assets/images/foot1.png"></a>
-        <a href=""><img src ="assets/images/foot2.png"></a>
-        <a href=""><img src ="assets/images/foot3.png"></a>
-        <a href=""><img src ="assets/images/foot4.png"></a>
+        <a href="https://www.facebook.com/scioto.ridge.18" target='_blank'><img src ="assets/images/foot1.png"></a>
+        <a href="https://instagram.com/sciotoridge?igshid=112puuc4s6hsw"target='_blank'><img src ="assets/images/foot2.png"></a>
+        <a href="https://twitter.com/ridgescioto?s=21"target='_blank'><img src ="assets/images/foot3.png"></a>
+        <a href="https://youtube.com/channel/UCakxFp_VzCdsfKUa6ToFUTQ" target='_blank'><img src ="assets/images/foot4.png"></a>
 	</div>
 	
 	
@@ -431,7 +430,7 @@ class FooterClass extends HTMLElement {
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
     connectedCallback() {
-        console.log('connected!');
+        
     }
 }
 
@@ -459,4 +458,4 @@ The template MUST be added into the variable at the top of this file.
 After the class the next line should be window.customElements.define()
 in the same format as the test one above. And thats it. */
 
-console.log('connection active'); //debug
+

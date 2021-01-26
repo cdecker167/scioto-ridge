@@ -14,7 +14,6 @@ html, pre{
 	scroll-behavior: smooth;
 }
 
-
 h1{
 	color: #32C5F4;
 	text-align: center;
@@ -89,7 +88,7 @@ a:hover{
 /*  HEADER  */
 
 header{
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coaster1.jpg");
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coaster2.jpg");
 	
 	height: 90vh;
 	background-repeat: no-repeat;
