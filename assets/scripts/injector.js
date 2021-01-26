@@ -140,10 +140,21 @@ nav .button:hover{
 	font-size: 40px;
 	z-index: 12;
 	margin-right: 15px;
+	text-align: right;
+	position: static;
+	
 }
 
 #responsive{
 	display: none;
+	font-size: .75em;
+	text-align: right;
+	/* margin-top: calc(62px + 2vw); */
+	
+}
+
+#responsive a{
+	display: block;
 }
 
 @media screen and (max-width: 800px) {
@@ -154,8 +165,18 @@ nav .button:hover{
 	#burger{
 		display: block;
 		z-index: 5;
+		
+		
 	}
+
+	
   }
+
+  @media screen and (min-width: 800px) {
+	#responsive{
+		display: none;
+	}
+}
 
 </style>
 <nav>
@@ -194,21 +215,21 @@ nav .button:hover{
     </div>
 	</div>
 
-	<div onclick='burgFunc()'id='burger'>
-		<a id="burg"><i class='fa fa-bars'></i></a>
-			<div id='responsive'>
-				<a href="reserve.html">Reserve</a>	
-				<a href="attractions.html">Attractions</a>
-				<a href="info.html">Info</a>
-				<a href="register.html">Register</a>
-			</div>
+	<div  id='burger'>
+		<a id="burg"><i onclick='burgFunc()'class='fa fa-bars'></i></a>
+		<div id='responsive'>
+		<a href="reserve.html">Reserve</a>	
+		<a href="attractions.html">Attractions</a>
+		<a href="info.html">Info</a>
+		<a href="register.html">Register</a>
+	</div>
 	</div>
 
 	
 	
 </nav>
 
-	
+
 
 </template>
 
@@ -276,6 +297,7 @@ footer img{
 	width: auto;
 	margin: 20px;
 	max-height: 100px;
+	border-radius: 12px;
 	
 }
 
@@ -361,10 +383,9 @@ button{
 	<a class="button" id='login-button' href="login.html">Login</a>
 	<a class="button" id='register-button' href="register.html">Register</a>
 </div>
-	<form style="margin-top: 30px; height: 50px;" action="">
-	<input style='border-radius: 6px; border-color: #32C5F4;'type="text" placeholder="Search Scioto Ridge" name="search">
-	<button style='background-color: #32C5F4; border-radius: 8px; border-color: #32C5F4;' type="submit"><i class="fa fa-search"></i></button>
-	</form>
+	
+<a href="about.html" style=' color: var(--tan); font-size: 1.5em'>About Us</a>
+
 </div>
 
 <div class="foot-right">

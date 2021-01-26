@@ -7,10 +7,9 @@
 		<link rel='stylesheet' type='text/css' href='assets/styles/formStyles.css'>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-		
 		<div id="templates-house"></div>
 		<script src='assets/scripts/injector.js'></script>
-		
+		<script src='assets/scripts/burger.js'></script>
 		
 		<title>
 			Scioto Ridge
@@ -25,17 +24,24 @@
 
 	<div class="container"></div>
 
-
+	<div style='position: relative;' >
 	<video autoplay  muted >
 		<source src="assets\images\SciotoRidgeBumper.mp4" type="video/mp4" />
 	</video>
+
+	
+
+</div>
+
+<a href="#reserve"><div  style='top: 0; position: relative; color: var(--blue);'class="chevron"></div></a>
+
 	<div id='reserve-form'>
-	<a href="#reserve"><div  style='margin-top: -150px; color: var(--blue);'class="chevron"></div></a>
+	
 	
 		<h1 id='reserve'>Reserve</h1>
 
 		<form class="reserve" id='reserve-form' action="">
-			<label for="cars">Attraction:</label> 
+			<label for="cars"style='font-weight:bold; font-size: 1.5em' >Attraction:</label> 
 			<br>
 			<select name="attraction" id="attraction">
 			  <option value="false"></option>	
@@ -63,7 +69,7 @@
 			
 		 
 
-			<label for="time">Time:</label>
+			<label for="time"style='font-weight:bold; font-size: 1.5em'>Time:</label>
 			<br>
 			<select name="time" id="time">
 			  <option value="false"></option>
@@ -125,7 +131,7 @@
 		  <br><br>
 
 		  
-			<label for="size">Group Size:</label>
+			<label for="size" style='font-weight:bold; font-size: 1.5em'>Group Size:</label>
 			<br>
 			<select name="size" id="size">
 			  <option value="false"></option>
@@ -141,7 +147,7 @@
 	</div>
 	<div id='not-logged-in'>
 		<h1>Not Logged In</h1>
-		<p class='text'>Please <a href='login.html'>Log In</a> or <a href='register.html'>Create an Account</a>, then come back here to reserve your spot!</p>
+		<p class='text'>Please <a href='login.html' color='var(--red)'>Log In</a> or <a href='register.html' color='var(--red)' >Create an Account</a>, then come back here to reserve your spot!</p>
 		<p class='text'>We use an account system to minimize fraudulent reservations, and to ensure accurate reporting across our internal reservation system. This helps us deliver the high-quality experience that our guests expect, each and every day.</p>
 	</div>
 	<div id='post-submit'>
