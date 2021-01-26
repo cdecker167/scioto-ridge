@@ -23,8 +23,29 @@ window.onload = () => {
             }
         });
     });
+    footLogin.textContent = 'Reserve';
+    footLogin.setAttribute('href','reserve.html');
+    footRegister.style.display = 'none';
     API.get('/login/v')
     .then(response => {
-        
-    })
+        if (response.session == 'true') {
+            fName.textContent = `${response.firstName}`;
+            lName.textContent = `${response.lastName}`;
+        }
+    });
+    API.get('/email')
+    .then(response => {
+        email.textContent = `${response.email}`
+    });
+    API.get('/report')
+    .then(response => {
+        let resArray = response.reservations;
+        resArray.forEach(res => {
+            table.insertAdjacentHTML('beforeend',`<tr>
+            <td>${res.time}</td>
+            <td>${res.attraction}</td>
+            <td>${res.confirmation}</td>
+        </tr>`)
+        });
+    });
 }
