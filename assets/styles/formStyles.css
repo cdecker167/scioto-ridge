@@ -22,7 +22,7 @@ input:disabled {
     align-items: center;
 }
 .error { 
-    background-color: red;
+    background-color: var(--rojo);
     padding: 1em;
     border-radius: 1em;
     display: none;
