@@ -24,37 +24,64 @@
 
         <div class='adminbox'>
             <div>
-            <ul>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
-                <li>Roller Coaster</li>
+                <input style='background-color: white; margin: 12px; width: 90%;'class='textbox' type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for an Attraction.." title="Type in a name">
+
+            <ul id='myUL'>
+                <li><a>Roller Coaster</a></li>
+                <li><a>Ferris Wheel</a></li>
+                <li><a>Swings</a></li>
+                <li><a>Rocket Ship</a></li>
+                <li><a>Sling Shot</a></li>
+                <li><a>Haunted Castle Ride</a></li>
+                <li><a>Parachute Drop</a></li>
+                <li><a>Merry-Go-Round</a></li>
+                <li><a>Antique Cars</a></li>
+                <li><a>Cage Ride</a></li>
+                <li><a>Train</a></li>
+                <li><a>Boats</a></li>
+                <li><a>Chuck Wagon</a></li>
+                <li><a>Dogs To Go</a></li>
+                <li><a>Chickens-R-Us</a></li>
+                <li><a>Easy As Pie Diner</a></li>
+                <li><a>Forever Cool Ice Cream</a></li>
+                <li><a>Magic Show</a></li>
                 
             </ul>
+
+            <script>
+                function myFunction() {
+                    var input, filter, ul, li, i, txtValue;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("myUL");
+                    li = ul.getElementsByTagName("li");
+                    for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "block";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+                </script>
+
             </div>
 
             <div class='admin-right'>
                 <h1>Park Reports</h1>
-                <p><span style='color: var(--blue)'>10 </span>Riders Today</p>
+                <p><span style='color: var(--blue)'>10 </span>Reservations Today</p>
                 
-                <p><span style='color: var(--blue)'>70 </span>Riders in the Past Week</p>
+                <p><span style='color: var(--blue)'>70 </span>Reservations in the Past Week</p>
                 
-                <p><span style='color: var(--blue)'>300 </span>Riders in the Past Month</p>
+                <p><span style='color: var(--blue)'>300 </span>Reservations in the Past Month</p>
                 <br><br>
 
                 <h1>Modify Data</h1>
                 <form>
-                    <input type='number' id='waittime' min='0' > <label for='waittime' style='color:black' >Ride Wait Time (minutes)</label>
-                    <p>Ride Status</p>
+                    <input type='number' id='waittime' min='0' > <label for='waittime' style='color:black' >Wait Time (minutes)</label>
+                    <p>Attraction Status</p>
                     <input type="radio" name='ridestatus' id="open" value="open" checked>
                     <label for="open">Open</label>
                     <input type="radio" name='ridestatus' id="closed" value="closed">

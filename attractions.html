@@ -555,6 +555,37 @@
 
         </div>
 
+        <div class='modal' id='magic'>
+
+            <div class='modal-content'>
+ 
+            <span class="close" onclick='xclose()'>&times;</span>
+
+            <div class='modal-top'>
+                <div>
+                <h2>Magic Show</h2>
+                <p>Stars</p>
+                <p>Current Wait Time: <span style='color:#EF3E3D'>x minutes</span></p>
+                </div>
+                <img src='assets/images/Magician-01.png'>
+            </div>
+            <br>
+
+            <p id='desc'><span style='color:#185f76; text-align: left;'>
+                
+                Abra kadabra! Alakazam! We will blow your mind, cook it up in a pan. 
+            </span><br><br>
+            
+            </p>
+ 
+
+            <a href="reserve.html" class='button'>Reserve</a>
+                
+            </div>
+
+
+        </div>
+
         <script>
             var modal = document.getElementsByClassName("modal")[0];
 
@@ -580,21 +611,23 @@
                 || event.target == document.getElementsByClassName("modal")[14]
                 || event.target == document.getElementsByClassName("modal")[15]
                 || event.target == document.getElementsByClassName("modal")[16]
+                || event.target == document.getElementsByClassName("modal")[17]
+                
                 
                 ) {
-                    for(i = 0; i < 17; i++ ){
+                    for(i = 0; i < 18; i++ ){
 
                     document.getElementsByClassName("modal")[i].style.display = "none";
                     }
                 }
             }
 
-            span.onclick = function() {
+            /* span.onclick = function() {
                 for(let i = 0; i < 17; i++ ){
 
                 document.getElementsByClassName("modal")[i].style.display = "none";
                 }
-            }
+            } */
 
         </script>
 
@@ -836,7 +869,26 @@
             </div></a>
 
         </div>
+
+        <h2 style='padding-top: calc(72px + 2vw)'id='shows'><span style='color:#EF3E3D'>Shows</span></h2>
+
+        <div class='shows'>
+
+        <a ><div class="popbox"onclick='magic()'>
+
+            <img src="assets/images/Magician-01.png">
+
+            <h2>Magic Show</h2>
+
+            <div class="attractbutt">
+                <a class="button"  >Info</a>
+                <a class="button"  href="reserve.html">Reserve</a>
+            </div>
+
+        </div></a>
         
+    </div>
+
 		<footer-pro></footer-pro>
         <!--Scripts-->
         <script src='assets/scripts/attNinfo.js' type='module'></script>

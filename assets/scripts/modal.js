@@ -1,5 +1,5 @@
 function xclose(){
-    for (let i=0; i<17; i++){
+    for (let i=0; i<18; i++){
         document.getElementsByClassName('modal')[i].style.display = 'none';
     }
 }
@@ -102,6 +102,12 @@ function easy(){
 
 function forever(){
     var modal = document.getElementById('forever');
+
+    modal.style.display = 'block';
+}
+
+function magic(){
+    var modal = document.getElementById('magic');
 
     modal.style.display = 'block';
 }

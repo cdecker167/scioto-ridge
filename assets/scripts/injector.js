@@ -276,6 +276,7 @@ footer img{
 	width: auto;
 	margin: 20px;
 	max-height: 100px;
+	border-radius: 12px;
 	
 }
 
