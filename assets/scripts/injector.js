@@ -430,7 +430,7 @@ class FooterClass extends HTMLElement {
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
     connectedCallback() {
-        console.log('connected!');
+        
     }
 }
 
@@ -458,4 +458,4 @@ The template MUST be added into the variable at the top of this file.
 After the class the next line should be window.customElements.define()
 in the same format as the test one above. And thats it. */
 
-console.log('connection active'); //debug
+
