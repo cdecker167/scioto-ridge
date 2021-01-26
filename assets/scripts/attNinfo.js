@@ -6,11 +6,9 @@ const footRegister = document.querySelector('footer-pro').shadowRoot.querySelect
 
 const API = new Backend();
 API.setBaseUrl('http://127.0.0.1:5000');
-console.log('here in attNinfo');
 window.onload = () => {
     API.get('/login/v')
     .then(response => {
-        console.log(response);
         if (response.session == 'true') {
             loginButton.textContent = 'Profile';
             loginButton.setAttribute('href','profile.html');
