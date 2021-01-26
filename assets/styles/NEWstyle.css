@@ -26,6 +26,17 @@ h2{
 	color: var(--red);
 }
 
+h3, h3 a{
+	cursor: pointer;
+	color:#32C5F4;
+	margin: 15px;
+	text-align: center;
+}
+
+h3:hover, h3 a:hover{
+	color:#EF3E3D;
+}
+
 img{
 	width: 100%;
 }
@@ -34,7 +45,11 @@ body{
 	margin: 0 auto;
 	text-align: center;
 	position: relative;
-  	min-height: 100vh;
+  	
+}
+
+main{
+	min-height: 70vh;
 }
 
 video{
@@ -75,13 +90,15 @@ a:hover{
 	content: '';
 	display: inline-block;
 	height: 2em;
-	left: 0.15em;
-	position: relative;
-	vertical-align: top;
+	
+	position: absolute;
+	
 	width: 2em;
-	top: 0;
+	top: 60%;
+	text-align: center;
 	transform: rotate(135deg);
 	color: var(--tan);
+	margin: 0 auto;
 	
 }
 
@@ -89,7 +106,7 @@ a:hover{
 
 header{
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coaster2.jpg");
-	
+	min-height: 400px;
 	height: 90vh;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -131,22 +148,22 @@ header p{
 	justify-content: center; */
 }
 
-.mapdiv img{
-	height: 70vh; width: auto; margin: 25px; border-radius: 25px;
+.maptitles{
+	display: flex;
+	justify-content: center;
 }
 
-/* @media screen and (max-width: 850px) {
-	.mapdiv > p{
-		display: none;
-	}
-	.mapdiv{
-		grid-template-columns: 100%;
-	}
+.mapdiv img{
+	height: 70vh; width: auto; max-width: 100%; margin: 25px; border-radius: 25px;
+}
+
+@media screen and (max-width: 920px) {
+	
 	.mapdiv img{
 		height: 90%;
 		width: 90%;
 	}
-  } */
+  }
 
 /*RESERVE PAGE*/
 

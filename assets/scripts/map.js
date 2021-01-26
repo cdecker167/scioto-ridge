@@ -3,11 +3,11 @@ function xtreme(){
 }
 
 function kiddy(){
-    document.getElementById('mapwords').textContent = "Scioto Kiddy Land: For our young familys or just those who are still feeling blue from the Roller Coaster, don’t let the name deceive you, the Scioto Kiddy Land has something for everyone. Maybe you’re looking to relive the glory days in some antique models cars, if so, the Antique Cars are just for you. Or maybe something equally as classic, the good ol’ fashioned Merry-Go-Round. Perhaps you want a glimpse into the future, try out our brand new, state-of-the-art VR space exploration simulation ride, the Rocket Ship. Or take a break, relax, and enjoy the view from 120 ft on our Ferris Wheel.";
+    document.getElementById('mapwords').textContent = "Scioto Kiddy Land: For our young families or just those who are still feeling blue from the Roller Coaster, don’t let the name deceive you, the Scioto Kiddy Land has something for everyone. Maybe you’re looking to relive the glory days in some antique models cars, if so, the Antique Cars are just for you. Or maybe something equally as classic, the good ol’ fashioned Merry-Go-Round. Perhaps you want a glimpse into the future, try out our brand new, state-of-the-art VR space exploration simulation ride, the Rocket Ship. Or take a break, relax, and enjoy the view from 120 ft on our Ferris Wheel.";
 }
 
 function haunted(){
-    document.getElementById('mapwords').textContent = "The Haunted Forest: When the sun is high, the forest is thriving, when the sun fades away, the haunted forest is unliving.";
+    document.getElementById('mapwords').textContent = "The Haunted Forest: When the sun is high, take a peaceful train ride to explore the scenery, but when the sun fades away, the haunted forest truly comes alive.";
 }
 
 function food(){
