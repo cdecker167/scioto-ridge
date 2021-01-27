@@ -29,7 +29,6 @@ nav{
 	width:100%;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 2;
-	
 }
 
 .links{
@@ -60,15 +59,13 @@ nav .button, footer .button, header .button{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
-	
 }
-
-
 
 nav img{
 	height: calc(30px + 2vw);
-	
 }
+
+/*      DROP DOWN CONTENT       */
 
 .attractionsdrop:hover .dropdown-content {
 	display: block;
@@ -85,11 +82,7 @@ nav img{
 	background-color:transparent;
 	text-align: center;
 	border-radius: 8px;
-	
-	
-
 }
-
 
 .tan{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
