@@ -7,6 +7,7 @@ const fName = document.querySelector('#f-name');
 const lName = document.querySelector('#l-name');
 const email = document.querySelector('#email');
 const table = document.querySelector('#report');
+const ratingDiv = document.querySelector('#rating');
 
 const API = new Backend();
 API.setBaseUrl('http://127.0.0.1:5000');
@@ -45,7 +46,9 @@ window.onload = () => {
             <td>${res.time}</td>
             <td>${res.attraction}</td>
             <td>${res.confirmation}</td>
-        </tr>`)
+        </tr>`);
+            ratingDiv.insertAdjacentHTML('beforeend',`<h3>${res.attraction}</h3><form class="stars" data-id-num=${res.att_id}> <div class='onlystars'> <input type="radio" id="five" name="rate" value="5" class='stary'> <label for="five"></label> <input type="radio" id="four" name="rate" value="4" class='stary'> <label for="four"></label> <input type="radio" id="three" name="rate" value="3" class='stary'> <label for="three"></label> <input type="radio" id="two" name="rate" value="2" class='stary'> <label for="two"></label> <input type="radio" id="one" name="rate" value="1" class='stary' > <label for="one"></label> </div> <input type='submit' class='button' valu='Submit'> </form>`);
+            
         });
     });
 }

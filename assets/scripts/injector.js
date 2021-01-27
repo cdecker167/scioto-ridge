@@ -35,6 +35,7 @@ nav{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	font-weight:700;
 }
 
 .navbutt{
@@ -58,15 +59,13 @@ nav .button, footer .button, header .button{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
-	
 }
-
-
 
 nav img{
 	height: calc(30px + 2vw);
-	
 }
+
+/*      DROP DOWN CONTENT       */
 
 .attractionsdrop:hover .dropdown-content {
 	display: block;
@@ -83,11 +82,7 @@ nav img{
 	background-color:transparent;
 	text-align: center;
 	border-radius: 8px;
-	
-	
-
 }
-
 
 .tan{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -142,6 +137,7 @@ nav .button:hover{
 	margin-right: 15px;
 	text-align: right;
 	position: static;
+	cursor: pointer;
 	
 }
 
@@ -149,7 +145,7 @@ nav .button:hover{
 	display: none;
 	font-size: .75em;
 	text-align: right;
-	/* margin-top: calc(62px + 2vw); */
+	padding-left: -400px;
 	
 }
 
@@ -218,6 +214,7 @@ nav .button:hover{
 	<div  id='burger'>
 		<a id="burg"><i onclick='burgFunc()'class='fa fa-bars'></i></a>
 		<div id='responsive'>
+		<a href="index.html">Home</a>
 		<a href="reserve.html">Reserve</a>	
 		<a href="attractions.html">Attractions</a>
 		<a href="info.html">Info</a>
