@@ -30,7 +30,6 @@ form.addEventListener('submit', event => {
             errorMes.textContent = 'ERROR: Invalid Admin Credentials';
             errorMes.style.display = 'block';
             button.disabled = false;
-            email.value = "";
             pass.value = "";
         }
     });
