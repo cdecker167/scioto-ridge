@@ -7,7 +7,7 @@ function xclose(){
     }
 }
 
-/*    
+/*    A bunch of onclick functions for each modal     */
 
 function roller(){
     var modal = document.getElementById('roller');

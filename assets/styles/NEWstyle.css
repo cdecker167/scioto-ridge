@@ -1,5 +1,7 @@
 /*  ALL HTML  */
 
+
+/* Made variables for all the site's colors   */
 :root {
 	--red: #EF3E3D;
 	--blue: #32C5F4;
@@ -62,6 +64,8 @@ video{
 	height: calc(62px + 2vw);
 }
 
+/*    Style for all buttons on the site    */
+
 .button{
 	font-size: 18px;
 	padding: 10px 15px;
@@ -84,15 +88,15 @@ a:hover{
 	text-decoration: none;
 }
 
+/*   Arrows under headers that take you farther down the page   */
+
 .chevron{
 	border-style: solid;
 	border-width: 0.25em 0.25em 0 0;
 	content: '';
 	display: inline-block;
 	height: 2em;
-	
 	position: absolute;
-	
 	width: 2em;
 	top: 60%;
 	text-align: center;
@@ -136,16 +140,15 @@ header p{
 
 /*   HOME PAGE   */
 
+
+
+/*   widget used and customized from www.weatherwidget.io   */
+
 .weatherwidget-io{
 	width: 60%;
 	margin: 30px auto;
 	font-size: 50px;
 	
-}
-
-.mapdiv{
-	/* display: flex;
-	justify-content: center; */
 }
 
 .maptitles{
@@ -156,6 +159,8 @@ header p{
 .mapdiv img{
 	height: 70vh; width: auto; max-width: 100%; margin: 25px; border-radius: 25px;
 }
+
+/*   Makes map take up more screen when screen gets small    */
 
 @media screen and (max-width: 920px) {
 	
@@ -373,7 +378,7 @@ li:hover{
 	text-align: center;
 	display: flex;
 	justify-content: center;
-  }
+}
 
   .stars .stary{
 	display: none;
@@ -418,14 +423,16 @@ li:hover{
 	display: block;
   }
 
-	table{
+	
+ 
+ table{
 	  background-color: var(--tan);
 	  color: var(--blue);
 	  text-align: center;
 	  border-collapse: collapse;
 	  margin: 0 auto;
 	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
-  }
+}
 
   th{
 	  background-color: var(--navy);

@@ -1,3 +1,6 @@
+
+/*   Onclick functions to make info about the park appear on the homescreen    */ 
+
 function xtreme(){
     document.getElementById('mapwords').textContent = "Xtreme at the Ridge: Our most daring section of the park, Xtreme at the Ridge is chocked full of thrilling attractions. Take a leap of faith off of our 1:3 Space Needle. If you’d rather be strapped into a chair, try our 15 story high swing set. Or set sail on the Scioto River in one of our various types of vessels. Perhaps you're a fan of fair rides, if so, try out the Cage Ride, a new and improved take on the classic fair ride. Maybe you idolize David & Goliath, try being the pebble in David’s sling shot as you get launched 280 ft into the air. But for our true thrill seekers, looking for only the most daring and extreme attractions, try the Roller Coaster. The signature attraction here at Scioto Ridge, the Roller Coaster combines high speeds and high heights as you race along the steel tracks.";
 }
