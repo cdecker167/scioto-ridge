@@ -6,7 +6,7 @@ const button = document.querySelector('#submit-button');
 const errorMes = document.querySelector('#error-message');
 
 const API = new Backend();
-API.setBaseUrl('http://127.0.0.1:5000');
+API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
 
 form.addEventListener('keyup', () => {
     if (email.validity.valid && pass.value) {

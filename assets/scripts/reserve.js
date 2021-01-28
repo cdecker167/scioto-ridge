@@ -12,10 +12,11 @@ const noLogin = document.querySelector('#not-logged-in');
 const postSubmit = document.querySelector('#post-submit');
 const code = document.querySelector('#code');
 const timeOptions = document.querySelectorAll('.time');
+const magicTimes = document.querySelectorAll('.magic');
 const height = document.querySelector('#extra-height');
 
 const API = new Backend();
-API.setBaseUrl('http://127.0.0.1:5000');
+API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
 
 window.onload = () => {
     postSubmit.style.display = 'none';
@@ -65,6 +66,21 @@ reserveForm.addEventListener('click', () => {
     } else {
         button.disabled = true;
     }
+    if (attraction.value == '18') {
+        timeOptions.forEach(time => {
+            time.style.display = 'none';
+        });
+        magicTimes.forEach(time => {
+            time.style.display = 'inline';
+        });
+    } else {
+        magicTimes.forEach(time => {
+            time.style.display = 'none';
+        });
+        timeOptions.forEach(time => {
+            time.style.display = 'inline';
+        });
+    }
 });
 
 reserveForm.addEventListener('submit', event => {
@@ -81,5 +97,5 @@ reserveForm.addEventListener('submit', event => {
            postSubmit.style.display = 'flex';
            code.textContent = `${response.confirmation}`;
         }
-    })
+    });
 });
