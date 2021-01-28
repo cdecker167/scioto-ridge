@@ -7,6 +7,7 @@ const footRegister = document.querySelector('footer-pro').shadowRoot.querySelect
 const headMessage = document.querySelector('#header-message');
 const headLogin = document.querySelector('#head-login-button');
 const headRegister = document.querySelector('#head-register-button');
+const itinbutt = document.querySelector('#itinbutt');
 
 const API = new Backend();
 API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
@@ -36,6 +37,7 @@ window.onload = () => {
             footRegister.style.display = 'none';
             footLogin.textContent = 'Reserve';
             footLogin.setAttribute('href','reserve.html');
+            itinbutt.setAttribute('href', 'profile.html');
         }
     })
 }
