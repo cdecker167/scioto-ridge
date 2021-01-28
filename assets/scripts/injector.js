@@ -17,9 +17,7 @@ const templates = `
 }
 
 html{
-	
 	font-family: 'Raleway', sans-serif;
-	/*font-weight: bold;*/
 }
 
 /*      NAV BAR        */
@@ -43,7 +41,7 @@ nav{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-weight:700;
+	font-weight:600;
 }
 
 .navbutt{
@@ -100,7 +98,7 @@ nav img{
 nav a{
 	color: #32C5F4;
 	text-decoration: none;
-	margin: 0px 4vw 0px 4vw;
+	margin: 0px 3vw 0px 3vw;
 }
 
 nav a:hover{
@@ -190,6 +188,8 @@ nav .button:hover{
     <a href="index.html"> <img src="assets/images/logo3-02.png" /> </a>
     
     <div class='links'>
+
+	<a href="index.html">Home</a>
 
     <a href="reserve.html">Reserve</a>	
 	
