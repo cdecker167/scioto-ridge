@@ -1,3 +1,6 @@
+
+<!--Attractions Page (Very long, lots of content)-->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,6 +22,8 @@
 
 	<body>
         
+        <!--The content of the modals are stored above the navbar-->
+
         <div class='modal' id='roller'>
 
             <div class='modal-content'>
@@ -585,14 +590,19 @@
 
         </div>
 
+        <!--Script to close the modals-->
+
         <script>
+
             var modal = document.getElementsByClassName("modal")[0];
 
             var span = document.getElementById("close");
 
 
-            
+            // Closes the modal when clicking anywhere outside it
             window.onclick = function(event) {
+
+                // This is definitely the best way to do this :)
                 if (event.target == modal 
                 || event.target == document.getElementsByClassName("modal")[1]  
                 || event.target == document.getElementsByClassName("modal")[2]
@@ -621,16 +631,7 @@
                 }
             }
 
-            /* span.onclick = function() {
-                for(let i = 0; i < 17; i++ ){
-
-                document.getElementsByClassName("modal")[i].style.display = "none";
-                }
-            } */
-
         </script>
-
-
 
 		<nav-bar></nav-bar>
 		
@@ -641,6 +642,8 @@
         <h1 style='margin-bottom: calc(-72px - 2vw)'>Attractions</h1>
         
         <h2 style='padding-top: calc(72px + 2vw)' id='rides'><span style='color:#EF3E3D'>Rides</span></h2>
+
+        <!-- Boxes that you click on to open the modals, each with an onclick function -->
 
         <div style='margin-bottom: calc(-72px - 2vw)' class="rides">
 
@@ -895,7 +898,7 @@
 </main>
 
 		<footer-pro></footer-pro>
-        <!--Scripts-->
+        <!--backend Scripts-->
         <script src='assets/scripts/attNinfo.js' type='module'></script>
         <script src='assets/scripts/attractions.js' type='module'></script>
     </body>

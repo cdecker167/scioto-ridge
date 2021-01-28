@@ -1,3 +1,6 @@
+
+<!--Admin Page, for viewing and modifying park data-->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,6 +27,8 @@
             <div>
                 <input style='background-color: white; margin: 12px; width: 90%;'class='textbox' type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for an Attraction.." title="Type in a name">
 
+            <!--List of Attractions-->
+            
             <ul id='myUL'>
                 <li class='list-item' data-id-num='1' id='roller'><a>Roller Coaster</a></li>
                 <li class='list-item' data-id-num='2' id='ferris'><a>Ferris Wheel</a></li>
@@ -43,8 +48,9 @@
                 <li class='list-item' data-id-num='16' id='easy'><a>Easy As Pie Diner</a></li>
                 <li class='list-item' data-id-num='17' id='forever'><a>Forever Cool Ice Cream</a></li>
                 <li class='list-item' data-id-num='18' id='magic'><a>Magic Show</a></li>
-                
             </ul>
+
+            <!--Search Function, Parses List of Attractions and filters them-->
 
             <script>
                 function myFunction() {
@@ -66,6 +72,8 @@
                 </script>
 
             </div>
+
+            <!-- Modify Park Data -->
 
             <div class='admin-right'>
                 <h1>Park Reports</h1>
@@ -99,7 +107,7 @@
 
             </div>
         </div>
-    <!--Scripts-->
+    <!--Backend Scripts-->
     <script src='assets/scripts/admin.js' type='module' charset='utf-8'></script>
 	</body>
 

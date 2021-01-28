@@ -1,14 +1,5 @@
 
-
-/* function burgFunc1(){
-
-  const burg = document.querySelector('nav-bar').shadowRoot.querySelector('#burger');
-  const varName = document.querySelector('nav-bar').shadowRoot.querySelector('#responsive');
-
-      burg.addEventListener('click', () => {
-        varName.style.display = "block";
-    })
-  } */
+/* Onclick function that makes the responsive menu appear    */
 
     function burgFunc() {
         

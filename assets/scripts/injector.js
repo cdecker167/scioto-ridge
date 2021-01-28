@@ -1,3 +1,11 @@
+
+
+/*    A script that lets us to re-use our navbar and 
+	  footer across all pages, so changes to that code don't need 
+	  to be annoyingly copied. Created by Garrett Cox, backend coder  */
+
+
+
 const templates = `
 <template id='nav-template'>
 <style>
@@ -14,7 +22,7 @@ html{
 	/*font-weight: bold;*/
 }
 
-/*NAV BAR*/
+/*      NAV BAR        */
 
 nav{
 	position: fixed;
@@ -78,7 +86,6 @@ nav img{
 .dropdown-content {
 	display: none;
 	position: absolute;
-	/* z-index: 1; */
 	background-color:transparent;
 	text-align: center;
 	border-radius: 8px;
@@ -129,6 +136,8 @@ nav .button:hover{
   
 }
 
+/*      RESPONSIVENESS, MOBILE HAMBURGER MENU            */
+
 #burger{
 	display: none;
 	color: #32C5F4;
@@ -161,11 +170,7 @@ nav .button:hover{
 	#burger{
 		display: block;
 		z-index: 5;
-		
-		
 	}
-
-	
   }
 
   @media screen and (min-width: 800px) {
@@ -176,6 +181,8 @@ nav .button:hover{
 
 </style>
 <nav>
+
+<!-- TEMPLATE FOR NAV BAR -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src='assets/scripts/burger.js'></script>
@@ -198,11 +205,8 @@ nav .button:hover{
                 </div>
             </div>
     </div>
-    
     	
         <a href="info.html">Info</a>
-            
-    
 		
 	<div class="navbutt">
     <a class="button"  id='login-button' href="login.html">Login</a>
@@ -222,11 +226,7 @@ nav .button:hover{
 	</div>
 	</div>
 
-	
-	
 </nav>
-
-
 
 </template>
 
@@ -234,9 +234,7 @@ nav .button:hover{
 <style>
 
 html{
-	
 	font-family: 'Raleway', sans-serif;
-	/*font-weight: bold;*/
 }
 
 h1{
@@ -244,21 +242,7 @@ h1{
 	text-align: center;
 }
 
-footer .button{
-	font-size: 20px;
-	padding: 15px 30px;
-	color: #E6DADA;
-	background-color: #EF3E3D;
-	border: none;
-	border-radius: 8px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	font-family: 'Raleway', sans-serif;
-	text-decoration: none;
-	margin: 20px;
-	
-}
-
-/*FOOTER*/
+/*     FOOTER         */
 
 footer{
 	text-align: center;
@@ -281,8 +265,6 @@ footer{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	 
-
 }
 
 footer img{
@@ -295,11 +277,11 @@ footer img{
 	margin: 20px;
 	max-height: 100px;
 	border-radius: 12px;
-	
 }
 
+/*      FOOTER GRID     */
+
 .foot-right{
-	
 	text-align: center;
 }
 
@@ -310,14 +292,9 @@ footer img{
 
 #footertext{
 	text-align: right;
-	
-	
-	
 }
 
 .foot-middle{
-	
-	
 	text-align: center;
 }
 
@@ -336,6 +313,23 @@ button{
 	height: 35px
 	
 }
+
+.button{
+	font-size: 18px;
+	padding: 15px 20px;
+	color: #E6DADA;
+	background-color: #EF3E3D;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	font-family: 'Raleway', sans-serif;
+	text-decoration: none;
+	margin: 10px;
+	cursor: pointer;
+	margin-bottom: 40px;
+}
+
+/*      RESPONSIVENESS,  PARTS OF FOOTER GO AWAY ON SMALLER SCREENS       */
 
 @media screen and (max-width: 1050px) {
 	.foot-left{
@@ -395,10 +389,6 @@ button{
         <a href="https://twitter.com/ridgescioto?s=21"target='_blank'><img src ="assets/images/foot3.png"></a>
         <a href="https://youtube.com/channel/UCakxFp_VzCdsfKUa6ToFUTQ" target='_blank'><img src ="assets/images/foot4.png"></a>
 	</div>
-	
-	
-    
-  
     
 	<p> &copy 2021 High Thrills Entertainment, LLC </p>
 	
@@ -413,18 +403,18 @@ button{
 </template>
 `
 
-/*The stuff above here is important. All of the code you want to 
-reuse will live in the 'templates' variable. Copy and paste the 
-entire <template> into it. Formatting is not necessary but makes 
-less headache*/
+/*All of the code we  reuse lives in the 'templates' variable. */
+
 const house = document.querySelector('#templates-house');
 house.insertAdjacentHTML('beforeend', templates);
+
 /*These two lines inject the entirety of the templates variable 
 into an invisible div on whatever page this is attached to,
 allowing them to be read by later scripts.*/
 
-/*Constructor for TestTemplate. A class like this would be made
-for each element like nav, footer, etc.*/ 
+/* A Class Is made for each element */ 
+
+
 class NavClass extends HTMLElement {
     constructor() {
         super();
@@ -433,11 +423,7 @@ class NavClass extends HTMLElement {
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
     connectedCallback() {
-		
-		
 	}
-	
-
 }
 
 class FooterClass extends HTMLElement {
@@ -447,8 +433,7 @@ class FooterClass extends HTMLElement {
         const template = document.querySelector('#footer-template');
         shadowRoot.appendChild(template.content.cloneNode(true));
     }
-    connectedCallback() {
-        
+    connectedCallback() { 
     }
 }
 
@@ -460,20 +445,6 @@ window.customElements.define('nav-bar' , NavClass);
 window.customElements.define('footer-pro' , FooterClass);
 
 
-//This line must be included outside of the class. ^
-/*The way the arguments work for that is like this: 
-(name of element in html doc , class name)
-here, 'test-template' becomes <test-template></test-template> and 
-gains life from the class TestTemplate. */
 
-
-/*To use a new element you have to create a new class for it.
-to make one for navbar, just copy and paste the whole class, 
-change the name, and change the querySelector('#test-template')
-to #whatever-the-name-of-the-template-is
-
-The template MUST be added into the variable at the top of this file.
-After the class the next line should be window.customElements.define()
-in the same format as the test one above. And thats it. */
 
 

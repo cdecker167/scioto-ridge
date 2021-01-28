@@ -1,3 +1,6 @@
+
+<!--Reserve page-->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,11 +27,10 @@
 	<div class="container"></div>
 
 	<div style='position: relative;' >
+	<!--Video made in after effects by Colin Decker-->
 	<video autoplay  muted >
 		<source src="assets\images\SciotoRidgeBumper.mp4" type="video/mp4" />
 	</video>
-
-	
 
 </div>
 
@@ -39,6 +41,8 @@
 	
 		<h1 id='reserve'>Reserve</h1>
 
+
+		<!--Dropdown Menus to Select Attractions, Time, and Group Size-->
 		<form class="reserve" id='reserve-form' action="">
 			<label for="cars"style='font-weight:bold; font-size: 1.5em' >Attraction:</label> 
 			<br>
@@ -61,12 +65,9 @@
 			  <option value="15">Chickens-R-Us</option>
 			  <option value="16">Easy As Pie Diner</option>
 			  <option value="17">Forever Cool Ice Cream</option>
-
-
+			  <option value="18">Magic Show</option>
 			</select>
 			<br><br>
-			
-		 
 
 			<label for="time"style='font-weight:bold; font-size: 1.5em'>Time:</label>
 			<br>
@@ -144,6 +145,8 @@
 			<input class="button" id = 'submit-button' type="submit" value="Submit" disabled>
 		  </form>
 	</div>
+
+	<!--Won't let you reserve attractions if you're not logged in-->
 	<div id='not-logged-in'>
 		<h1>Not Logged In</h1>
 		<p class='text'>Please <a href='login.html' color='var(--red)'>Log In</a> or <a href='register.html' color='var(--red)' >Create an Account</a>, then come back here to reserve your spot!</p>
@@ -159,7 +162,7 @@
 		
 	</div>
 	<footer-pro></footer-pro>
-	<!--Scripts-->
+	<!--Backend Scripts-->
 	<script src='assets/scripts/reserve.js' type='module'></script>
     </body>
 

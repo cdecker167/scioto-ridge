@@ -1,8 +1,13 @@
+
+/*    Function that closes the modals if the [x] in them is clicked    */
+
 function xclose(){
     for (let i=0; i<18; i++){
         document.getElementsByClassName('modal')[i].style.display = 'none';
     }
 }
+
+/*    
 
 function roller(){
     var modal = document.getElementById('roller');

@@ -51,6 +51,7 @@
 
 		<h1>Park Map</h1>
 		<h2>Click on a Park Sector to Learn More!</h2>
+
 		<div class='mapdiv'>
 
 			<div class='maptitles'>
@@ -61,33 +62,16 @@
 				<h3 onclick='haunted()'><a href='#mapwords'>The Haunted Forrest</a></h3>
 
 			</div>
-
+			<!--Onclick functions to inject #mapwords with descriptions-->
 			<script src='assets/scripts/map.js'></script>
 
+
+			<!--Map Design By Logan Nowlin-->
 			<img src="assets/images/Map.png" usemap="#image-map">
 
-			<!-- <map name="image-map">
-				<area onclick='xtreme()' target="_self" alt="xtreme" title="xtreme" href="#mapwords" coords="11,11,1622,1076" shape="rect">
-				<area target="_self" alt="kiddy" title="kiddy" href="#mapwords" coords="0,2509,1360,1090" shape="rect">
-				<area target="_self" alt="haunted" title="haunted" href="#mapwords" coords="2260,28,3255,1416" shape="rect">
-				<area target="_self" alt="food" title="food" href="#mapwords" coords="1612,1430,3252,2502" shape="rect">
-			</map> -->
-
-			<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/imageMapResizer.min.js"></script>
-	<script type="text/javascript">
-
-		$('map').imageMapResize();
-
-	</script> -->
 			
+		<p id='mapwords' style='font-weight: bold; margin: 0 auto; width: 60%; color: var(--navy);' ></p>
 
-
-		<p id='mapwords' style='font-weight: bold; margin: 0 auto; width: 60%; color: var(--navy);' >
-		
-			
-			
-		</p>
 		</div>
 
 		<h1 onclick='food()'>View Your Itinerary</h1>
@@ -98,7 +82,7 @@
 		</main>
 
 		<footer-pro></footer-pro>
-	<!--Scripts-->
+	<!--Backend Scripts-->
 	<script src='assets/scripts/home.js' type='module'></script>
 	</body>
 

@@ -1,3 +1,6 @@
+
+<!--Register Page-->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -39,6 +42,7 @@
             <label for="email">Email:</label>
 			<input type="email" id="email" name="email" class="textbox" placeholder="">
 			<p class='warning' id='email-warning'>&#128712; Must be a valid Email</p>
+			<!--Detects When Invalid Email-->
 			<br/><br/>
 			<label for="password">Password:</label>
 			<input type="password" id="password" name="password" class="textbox passbox" placeholder="">
@@ -46,6 +50,7 @@
 			<label for="confPass">Re-enter password:</label>
 			<input type="password" id="confPass" name="confPass" class="textbox passbox" placeholder="">
 			<p class='warning' id='password-warning'>&#128712; Passwords Must Match</p>
+			<!--Detects when passwords don't match-->
 			<br/><br/>
             <a href=''><input class="button" id='submit-button' type="submit" disabled></a>
 		</form>
@@ -53,7 +58,7 @@
 	</main>
 
 		<footer-pro></footer-pro>
-		<!--Scripts-->
+		<!--Backend Scripts-->
 		<script src='assets/scripts/register.js' type='module'></script>
     </body>
 
