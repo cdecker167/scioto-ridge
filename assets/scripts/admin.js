@@ -1,3 +1,5 @@
+/*Controls the functionality for the admin page, modifynig park data, etc. */
+
 import {Backend} from './backend.js';
 const attractions = document.querySelectorAll('.list-item');
 const totalRes = document.querySelector('#total-res');
@@ -16,6 +18,8 @@ let FORMSELECTED = 0;
 const API = new Backend();
 API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
 
+/*verfies admin session, then gets the total reservations from the 
+database */
 window.onload = () => {
     API.get('/admin/v')
     .then(response => {
@@ -28,6 +32,9 @@ window.onload = () => {
     });
 }
 
+
+/*Each element in the list of attractions on the left populates the form 
+with the specific data from the database */
 attractions.forEach(att => {
     att.addEventListener('click', () => {
         button.value = 'Submit';
@@ -57,6 +64,8 @@ attractions.forEach(att => {
     });
 });
 
+/*controls the submission button, and assigns the 'open' or 'closed' value based on
+which radio button is selected */
 form.addEventListener('click', () => {
     if (waitTime.value && (open.checked == true || closed.checked == true) && FORMSELECTED != 0) {
         button.disabled = false;
@@ -70,6 +79,8 @@ form.addEventListener('click', () => {
     }
 });
 
+/* on form submit, the data from the form is sent to the API, 
+where it updates the values for the selected ride in the attractions table */
 form.addEventListener('submit', event => {
     event.preventDefault();
     API.post('/change-attraction',{

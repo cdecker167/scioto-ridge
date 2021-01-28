@@ -1,3 +1,5 @@
+/*this file is attached to reserve.html, and controls the form and form submission*/
+
 import {Backend} from './backend.js';
 const loginButton = document.querySelector('nav-bar').shadowRoot.querySelector('#login-button');
 const registerButton = document.querySelector('nav-bar').shadowRoot.querySelector('#register-button');
@@ -18,6 +20,8 @@ const height = document.querySelector('#extra-height');
 const API = new Backend();
 API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
 
+/*on window load, validates the user session. If no session could be found,
+then it changes the page and directs the user to login or create an account */
 window.onload = () => {
     postSubmit.style.display = 'none';
     API.get('/login/v')
@@ -48,7 +52,10 @@ window.onload = () => {
     .catch(error => {
         reserveForm.style.display = 'none';
         height.style.display = 'none';
-    })
+    });
+    /*since reservations can't be within 30 minutes of each other, a list of 
+    unavailable times is created via the database, and the unavailable times 
+    are disabled on the form */
     API.get('/reserve/forbidden')
     .then(response => {
         const timesList = response.unavailableTimes;
@@ -57,9 +64,12 @@ window.onload = () => {
                 option.disabled = true;
             }
         });
-    })
+    });
 }
 
+/*this function ensures that the form can only be submitted when all of the 
+select elements are not empty, and also changes the times to the ones available
+for the magic show if that is selected. */
 reserveForm.addEventListener('click', () => {
     if (attraction.value != "false" && time.value != "false" && size.value != "false") {
         button.disabled = false;
@@ -83,6 +93,9 @@ reserveForm.addEventListener('click', () => {
     }
 });
 
+/*on form submit, the data in the form is posted to the api, and then inserted 
+into the database, when the API responds that the action was successful, 
+the success message and confirmation code are displayed. */
 reserveForm.addEventListener('submit', event => {
     event.preventDefault();
     button.disabled = true;

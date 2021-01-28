@@ -1,3 +1,7 @@
+/*This file creates a wrapper class around the backend API, which shortens the syntax
+for fetch requests and such. Ended up being quite useful, especially for 
+POST requests */
+
 export class Backend {
     constructor() {
         this.baseUrl = "";
@@ -24,3 +28,5 @@ export class Backend {
         .then(response => response.json());
     }
 }
+
+/*The API returns JSON data, so we can return response.json() here for good measure. */
