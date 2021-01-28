@@ -4,6 +4,7 @@
 		<link rel="icon" type="image/png" href="assets/images/favicon.png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="assets/styles/NEWstyle.css" rel="stylesheet">
+		<link rel='stylesheet' type='text/css' href='assets/styles/formStyles.css'>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		<div id="templates-house"></div>
@@ -27,9 +28,9 @@
 
         <h1>Profile</h1>     
         
-        <p>First Name:  <span id='f-name' style='color: var(--blue)'>Ben</span></p>
-        <p>Last Name:  <span id='l-name' style='color: var(--blue)'>Starrett</span></p>
-        <p >Email:  <span id='email' style='color: var(--blue)'>buttsjr@gmail.com</span></p>
+        <p>First Name:  <span id='f-name' style='color: var(--blue)'></span></p>
+        <p>Last Name:  <span id='l-name' style='color: var(--blue)'></span></p>
+        <p >Email:  <span id='email' style='color: var(--blue)'></span></p>
 
 		<h1>Itinerary</h1>
 
@@ -46,7 +47,10 @@
 
 		<h1>Rate your Rides</h1>
 	<div id='rating'>
-		<!--<form class="stars">
+		<select id='att-select'>
+			<option value="false"></option>
+		</select>
+		<form class="stars" id='stars-form'>
 			<div class='onlystars'>
 			<input type="radio" id="five" name="rate" value="5" class='stary'>
 			<label for="five"></label>
@@ -59,9 +63,8 @@
 			<input type="radio" id="one" name="rate" value="1" class='stary' >
 			<label for="one"></label>
 			</div>
-			<input type='submit' class='button' valu='Submit'>
-		</form>-->
-		<!--Leave this commented out-->
+			<input type='submit' class='button' id='submit-button' value='Submit' disabled>
+		</form>
 	</div>
 		</main>
 

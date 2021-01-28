@@ -55,14 +55,17 @@ signUp.addEventListener('submit', event => {
         password: `${pass.value}`
     }).then(response => {
         if (response.success == 'true') {
-            errorMes.classList.remove('active');
+            errorMes.style.display = 'none';
             window.location.href = 'index.html';
         } else {
             errorMes.textContent = 'ERROR: Account with this email already exists!';
-            errorMes.classList.add('active');
+            errorMes.style.display = 'block';
+            email.value = "";
+            passwords[1].value = "";
         }
     })
     .catch(error => {
-        errorMes.textContent = 'ERROR: Internal Server Error. Our Engineers are hard at work to address this!';
+        errorMes.textContent = 'ERROR: Internal Server Error. Please Try Again';
+        errorMes.style.display = 'block';
     });
 });
