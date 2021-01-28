@@ -44,15 +44,17 @@ loginForm.addEventListener('submit', event => {
     })
     .then(response => {
        if (response.success == 'true') {
-          errorMes.classList.remove('active');
+          errorMes.style.display = 'none';
           window.location.href = 'index.html';
        } else {
           errorMes.textContent = 'ERROR: Incorrect Email or Password';
-          errosMes.classList.add('active');
+          errorMes.style.display = 'block';
+          password.value = "";
        }
     })
     .catch(error => {
+        console.log('here?');
         errorMes.textContent = 'ERROR: Internal Server Error. Please Try Again.'
-        errorMes.classList.add('active');
+        errorMes.style.display = 'block';
     })
 });

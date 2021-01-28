@@ -11,7 +11,7 @@ let currentModal = 0;
 window.onload = () => {
     API.get('/attractions')
     .then(response => {
-        for (let i=0; i<17; i++) {
+        for (let i=0; i<18; i++) {
             times[currentModal].textContent = `${response[`index${i+1}`].waitTime} minutes`;
             currentModal++;
         }
