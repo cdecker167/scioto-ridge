@@ -57,3 +57,9 @@ a, a:visited {
 #extra-height {
     height: 200px;
 }
+#rating {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}

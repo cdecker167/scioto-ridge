@@ -8,6 +8,12 @@ const lName = document.querySelector('#l-name');
 const email = document.querySelector('#email');
 const table = document.querySelector('#report');
 const ratingDiv = document.querySelector('#rating');
+const attSelect = document.querySelector('#att-select');
+const buttons = document.querySelectorAll('.stary');
+const submitButton = document.querySelector('#submit-button');
+const form = document.querySelector('#stars-form');
+let disabled = [];
+let rating = "";
 
 const API = new Backend();
 API.setBaseUrl('http://127.0.0.1:5000');
@@ -40,6 +46,7 @@ window.onload = () => {
     });
     API.get('/report')
     .then(response => {
+        let options = [];
         let resArray = response.reservations;
         resArray.forEach(res => {
             table.insertAdjacentHTML('beforeend',`<tr>
@@ -47,8 +54,35 @@ window.onload = () => {
             <td>${res.attraction}</td>
             <td>${res.confirmation}</td>
         </tr>`);
-            ratingDiv.insertAdjacentHTML('beforeend',`<h3>${res.attraction}</h3><form class="stars" data-id-num=${res.att_id}> <div class='onlystars'> <input type="radio" id="five" name="rate" value="5" class='stary'> <label for="five"></label> <input type="radio" id="four" name="rate" value="4" class='stary'> <label for="four"></label> <input type="radio" id="three" name="rate" value="3" class='stary'> <label for="three"></label> <input type="radio" id="two" name="rate" value="2" class='stary'> <label for="two"></label> <input type="radio" id="one" name="rate" value="1" class='stary' > <label for="one"></label> </div> <input type='submit' class='button' valu='Submit'> </form>`);
-            
+            options.push({name: `${res.attraction}`,id: Number.parseInt(res.att_id, 10)});
+        });
+        options.forEach(op => {
+            attSelect.insertAdjacentHTML('beforeend',`<option value="${op.id}">${op.name}</option>`)
         });
     });
 }
+
+ratingDiv.addEventListener('click', () => {
+    if (attSelect.value != 'false' && (buttons[0].checked || buttons[1].checked || buttons[2].checked || buttons[3].checked || buttons[4].checked) && !disabled.includes(attSelect.value)) {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
+});
+
+form.addEventListener('submit', event => {
+    event.preventDefault();
+    buttons.forEach(butt => {
+        if (butt.checked) {
+            rating = `${butt.value}`;
+        }
+    });
+    API.post('/review', {id: `${attSelect.value}`, rating: `${rating}`})
+    .then(response => {
+        buttons.forEach(butt => {
+            butt.checked = false;
+        });
+        submitButton.disabled = true;
+        disabled.push(attSelect.value);
+    })
+});
