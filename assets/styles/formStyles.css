@@ -41,7 +41,7 @@ input:disabled {
     text-align: center;
 }
 a, a:visited {
-    color: var(--navy);
+    color: var(--rojo);
 }
 #post-submit {
     display: flex;
