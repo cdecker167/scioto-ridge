@@ -14,7 +14,7 @@ let isClosed = '';
 let FORMSELECTED = 0;
 
 const API = new Backend();
-API.setBaseUrl('http://127.0.0.1:5000');
+API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
 
 window.onload = () => {
     API.get('/admin/v')

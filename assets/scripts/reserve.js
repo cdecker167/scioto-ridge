@@ -16,7 +16,7 @@ const magicTimes = document.querySelectorAll('.magic');
 const height = document.querySelector('#extra-height');
 
 const API = new Backend();
-API.setBaseUrl('http://127.0.0.1:5000');
+API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
 
 window.onload = () => {
     postSubmit.style.display = 'none';
@@ -97,5 +97,5 @@ reserveForm.addEventListener('submit', event => {
            postSubmit.style.display = 'flex';
            code.textContent = `${response.confirmation}`;
         }
-    })
+    });
 });

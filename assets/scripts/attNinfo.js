@@ -5,7 +5,7 @@ const footLogin = document.querySelector('footer-pro').shadowRoot.querySelector(
 const footRegister = document.querySelector('footer-pro').shadowRoot.querySelector('#register-button');
 
 const API = new Backend();
-API.setBaseUrl('http://127.0.0.1:5000');
+API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
 window.onload = () => {
     API.get('/login/v')
     .then(response => {

@@ -9,7 +9,7 @@ const headLogin = document.querySelector('#head-login-button');
 const headRegister = document.querySelector('#head-register-button');
 
 const API = new Backend();
-API.setBaseUrl('http://127.0.0.1:5000');
+API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
 
 let user = {};
 window.onload = () => {
