@@ -12,6 +12,7 @@ const noLogin = document.querySelector('#not-logged-in');
 const postSubmit = document.querySelector('#post-submit');
 const code = document.querySelector('#code');
 const timeOptions = document.querySelectorAll('.time');
+const magicTimes = document.querySelectorAll('.magic');
 const height = document.querySelector('#extra-height');
 
 const API = new Backend();
@@ -64,6 +65,21 @@ reserveForm.addEventListener('click', () => {
         button.disabled = false;
     } else {
         button.disabled = true;
+    }
+    if (attraction.value == '18') {
+        timeOptions.forEach(time => {
+            time.style.display = 'none';
+        });
+        magicTimes.forEach(time => {
+            time.style.display = 'inline';
+        });
+    } else {
+        magicTimes.forEach(time => {
+            time.style.display = 'none';
+        });
+        timeOptions.forEach(time => {
+            time.style.display = 'inline';
+        });
     }
 });
 
