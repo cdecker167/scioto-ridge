@@ -16,6 +16,26 @@ attraction. */
 
 let currentModal = 0;
 window.onload = () => {
+    API.get('/login/v')
+    .then(response => {
+        if (response.session == 'true') {
+            loginButton.textContent = 'Profile';
+            loginButton.setAttribute('href','profile.html');
+            registerButton.textContent = 'Logout';
+            registerButton.setAttribute('href','#');
+            registerButton.addEventListener('click', () => {
+                API.get('/logout')
+                .then(response => {
+                    if (response.success == 'true') {
+                        window.location.href = 'index.html';
+                    }
+                })
+            });
+            footRegister.style.display = 'none';
+            footLogin.textContent = 'Reserve';
+            footLogin.setAttribute('href','reserve.html');
+        }
+    });
     API.get('/attractions')
     .then(response => {
         for (let i=0; i<18; i++) {
