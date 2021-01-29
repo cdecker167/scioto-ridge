@@ -222,8 +222,8 @@ nav .button:hover{
 		<a href="reserve.html">Reserve</a>	
 		<a href="attractions.html">Attractions</a>
 		<a href="info.html">Info</a>
-		<a href="login.html">Login</a>
-		<a href="register.html">Register</a>
+		<a id='burgLog' href="login.html">Login</a>
+		<a id='burgReg' href="register.html">Register</a>
 	</div>
 	</div>
 
