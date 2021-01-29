@@ -1,3 +1,6 @@
+/*This file populates the user data on the profile page, and creates the 
+intinerary report table*/
+
 import {Backend} from './backend.js';
 const loginButton = document.querySelector('nav-bar').shadowRoot.querySelector('#login-button');
 const registerButton = document.querySelector('nav-bar').shadowRoot.querySelector('#register-button');
@@ -17,6 +20,11 @@ let rating = "";
 
 const API = new Backend();
 API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
+
+/*on page load, the user's session is validated with the API/database, and the user's
+data is returned and populated in the visible spots. The /report API path gets all
+of the reservations made by the user, and sends them back where they are inserted into
+the table*/
 
 window.onload = () => {
     loginButton.style.display = 'none';
@@ -62,6 +70,7 @@ window.onload = () => {
     });
 }
 
+/*Controls the submit button for ride rating */
 ratingDiv.addEventListener('click', () => {
     if (attSelect.value != 'false' && (buttons[0].checked || buttons[1].checked || buttons[2].checked || buttons[3].checked || buttons[4].checked) && !disabled.includes(attSelect.value)) {
         submitButton.disabled = false;
@@ -70,6 +79,8 @@ ratingDiv.addEventListener('click', () => {
     }
 });
 
+/*when the rating form is submitted, a POST request is sent to the API and then 
+the rating is recorded in the attraction reviews table */
 form.addEventListener('submit', event => {
     event.preventDefault();
     buttons.forEach(butt => {

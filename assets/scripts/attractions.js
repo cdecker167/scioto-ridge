@@ -1,3 +1,6 @@
+/*This file sends a request to the API, and populates the windows for each
+attraction with its rating and wait time */
+
 import {Backend} from './backend.js';
 const times = document.querySelectorAll('.time');
 const stars = document.querySelectorAll('.starz');
@@ -6,6 +9,10 @@ const ratings = [`<span style='color: #ef3e3d'></span><span style='color: #69696
 const API = new Backend();
 API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
 
+
+/*When the window loads, the requests are sent to the /attractions and /stars routes, 
+and then loops through the returned data and inserts it into the window for each
+attraction. */
 
 let currentModal = 0;
 window.onload = () => {

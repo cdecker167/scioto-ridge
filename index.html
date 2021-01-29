@@ -21,9 +21,23 @@
 
 	<body>
 
+		<script>
+			window.onclick = function(event) {
+				if (event.target == document.getElementById('mapmodal')){
+					document.getElementById('mapmodal').style.display = "none";
+					document.getElementsByTagName('body')[0].style.overflow = 'auto';
+				}
+			}
+		</script>
+
+		<div class='modal' id='mapmodal' >
+			<!--Map Design By Logan Nowlin-->
+			<img src="assets/images/Map-01.png" id='map' usemap="#image-map" alt='park map'>
+			</div>
+
 		<nav-bar></nav-bar>
 
-		<header style='margin-bottom: calc(-62px - 2vw)'>
+		<header style='margin-bottom: calc(-72px - 2vw)'>
 
 			<div class="headercontent" style='position: relative;'>
 			
@@ -35,14 +49,14 @@
 			<a  style='padding: 15px 25px'class="button" id='head-register-button' href="register.html">Register</a>
 			</div>
 
-			<a href="#weather"><div class="chevron" style='margin-top: 40px;'></div></a>
+			<a href="#weather"><div class="chevron" ></div></a>
 			
 			</div>
 
 		</header>
 		
 		<main style='padding: 60px;'>
-		<h1 id="weather" style='padding-top: calc(62px + 2vw)'> This Week at Scioto Ridge </h1>
+		<h1 id="weather" style='padding-top: calc(72px + 2vw)'> This Week at Scioto Ridge </h1>
 		<a class="weatherwidget-io" href="https://forecast7.com/en/39d90n82d76/43147/?unit=us" data-label_1="COLUMBUS" data-label_2="WEATHER" data-theme="original" data-basecolor="#e6dada" data-textcolor="#32C5F4" data-highcolor="#EF3E3D" data-lowcolor="#32C5F4" data-cloudcolor="#EF3E3D" data-snowcolor="#EF3E3D" >COLUMBUS WEATHER</a>
 		<script>
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
@@ -50,27 +64,26 @@
 		<br><br><br>
 
 		<h1>Park Map</h1>
-		<h2>Click on a Park Sector to Learn More!</h2>
 
 		<div class='mapdiv'>
 
-			<div class='maptitles'>
-
-				<h3 onclick='xtreme()'><a href='#mapwords'>Xtreme At the Ridge</a></h3>
-				<h3 onclick='kiddy()'><a href='#mapwords'>Scioto Kiddy Land</a></h3>
-				<h3 onclick='food()'><a href='#mapwords'>Food District</a></h3>
-				<h3 onclick='haunted()'><a href='#mapwords'>The Haunted Forrest</a></h3>
-
-			</div>
 			<!--Onclick functions to inject #mapwords with descriptions-->
 			<script src='assets/scripts/map.js'></script>
 
+			<img alt='park map' src="assets/images/Map-01.png" onclick='map()' usemap="#image-map" style='cursor: pointer; '>
 
-			<!--Map Design By Logan Nowlin-->
-			<img src="assets/images/Map.png" usemap="#image-map">
+			<h2>Click on a Park Sector to Learn More!</h2>
 
+			<div class='maptitles' margin-bottom: calc(-72px - 2vw);>
+
+				<h3 onclick='xtreme()'>Xtreme At the Ridge</h3>
+				<h3 onclick='kiddy()'>Scioto Kiddy Land</h3>
+				<h3 onclick='food()'>Food District</h3>
+				<h3 onclick='haunted()'>The Haunted Forest</h3>
+
+			</div>
 			
-		<p id='mapwords' style='font-weight: bold; margin: 0 auto; width: 60%; color: var(--navy);' ></p>
+		<p id='mapwords' style=' font-weight: bold; margin: 0 auto; width: 60%; color: var(--navy);' ></p>
 
 		</div>
 
@@ -83,7 +96,7 @@
 
 		<footer-pro></footer-pro>
 	<!--Backend Scripts-->
-	<script src='assets/scripts/home.js' type='module'></script>
+	<script src='assets/scripts/NEWhome.js' type='module'></script>
 	</body>
 
   
