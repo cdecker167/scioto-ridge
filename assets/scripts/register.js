@@ -1,3 +1,6 @@
+/*This file controls the register page, and is responsible for submitting the data
+for new users to the API, where it can be inserted into the database. */
+
 import {Backend} from './backend.js';
 const registerButton = document.querySelector('nav-bar').shadowRoot.querySelector('#register-button');
 const footRegister = document.querySelector('footer-pro').shadowRoot.querySelector('#register-button');
@@ -20,6 +23,8 @@ window.onload = () => {
     footRegister.style.display = 'none';
 }
 
+/*controls the submit button. can only submit with a valid email, 
+matching passwords, and all fields filled out */
 signUp.addEventListener('keyup', () => {
     if (fName.value && lName.value && email.validity.valid && passwords[0].value === passwords[1].value && email.value && passwords[0].value) {
         button.disabled = false;
@@ -28,6 +33,7 @@ signUp.addEventListener('keyup', () => {
     }
 });
 
+/*displays the text about passwords matching if the two do not match */
 passwords[1].addEventListener('keyup' , () => {
     if (passwords[0].value === passwords[1].value) {
         passWarn.classList.remove('active');
@@ -36,6 +42,7 @@ passwords[1].addEventListener('keyup' , () => {
     }
 });
 
+/* displays the email validity text if the value is not a valid email */
 email.addEventListener('keyup' , () => {
     console.log('keyup');
     if (email.validity.valid) {
@@ -45,6 +52,10 @@ email.addEventListener('keyup' , () => {
     }
 }); 
 
+/*on form submit, the form data is sent in the body of a POST request to the API, the 
+API validates it, and responds whether the insertion was successful. 
+If it was unsuccesful, or the request could not be fulfilled, an error message 
+is displayed accordingly. */
 signUp.addEventListener('submit', event => {
     event.preventDefault();
     button.disabled = true;

@@ -1,3 +1,8 @@
+
+/*This file is attached to the homepage, and is responsible for changing the page if 
+a user is logged in. */
+
+
 import {Backend} from './backend.js';
 const navBar = document.querySelector('nav-bar');
 const loginButton = document.querySelector('nav-bar').shadowRoot.querySelector('#login-button');
@@ -11,6 +16,11 @@ const itinbutt = document.querySelector('#itinbutt');
 
 const API = new Backend();
 API.setBaseUrl('https://whispering-garden-35353.herokuapp.com');
+
+
+/*When the page loads, a fetch request is sent to the route for verifying user sessions,
+and if there is a user logged in, the page changes to reflect that*/
+
 
 let user = {};
 window.onload = () => {
