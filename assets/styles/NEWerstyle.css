@@ -60,6 +60,7 @@ video{
 	
 }
 
+/*  Div under the nav bar to fill up empty space underneath it    */
 .container{
 	height: calc(62px + 2vw);
 }
@@ -98,7 +99,7 @@ a:hover{
 	height: 2em;
 	position: absolute;
 	width: 2em;
-	top: 60%;
+	cursor: pointer;
 	text-align: center;
 	transform: rotate(135deg);
 	color: var(--tan);
@@ -109,13 +110,16 @@ a:hover{
 /*  HEADER  */
 
 header{
+	/*   Image found on unsplash   */
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/coaster2.jpg");
 	min-height: 400px;
-	height: 90vh;
+	height: 95vh;
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
 	color: #e6dada;
+	position: relative;
+	z-index: 0;
 }
 
 .headercontent{
@@ -148,7 +152,8 @@ header p{
 	width: 60%;
 	margin: 30px auto;
 	font-size: 50px;
-	
+	z-index: -1;
+	position: relative;
 }
 
 .maptitles{
@@ -158,6 +163,18 @@ header p{
 
 .mapdiv img{
 	height: 70vh; width: auto; max-width: 100%; margin: 25px; border-radius: 25px;
+}
+
+#mapmodal img{
+	margin: 40px;
+	margin-top: calc(82px + 2vw);
+	border-radius: 20px;
+	width: auto;
+	height: auto;
+	z-index: 10 !important;
+	position: relative;
+	max-height: 90vh;
+	max-width: 100vw;
 }
 
 /*   Makes map take up more screen when screen gets small    */
@@ -214,12 +231,10 @@ select {
 	cursor: pointer;
 	min-height: 327px;
 	
-
 }
 
 .popbox img{
 	height: 60%;
-	
 }
 
 .popbox a{
@@ -238,11 +253,11 @@ select {
 .modal{
 	display: none;
 	position: fixed;
-	overflow: auto;
  	background-color: rgb(0,0,0); 
 	background-color: rgba(0,0,0,0.4); 
 	width: 100%;
-	height: 100vh;
+	height: 100vh ;
+	overflow: auto;
 }
 
 .modal-content{
@@ -251,12 +266,14 @@ select {
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 	text-align: center;
 	color: var(--blue);
-	width: 50%;
+	width: 80vh;
 	margin: 0 auto;
 	padding: 20px;
-	margin-top: 9%;
+	margin-top: calc(92px + 2vw);
 	height: auto;
 	font-size: 1.2em;
+	position: relative;
+	max-width: 80vw;
 }
 
 .close {
@@ -298,8 +315,8 @@ select {
 	border-radius: 6px;
 	border-color:#32C5F4;
 	background-color: #E6DADA;
-	height: 2vw;
-	width: 15vw;
+	height: calc(30px + .5vw);
+	width: calc(40px + 15vw);
 	font-family: 'Raleway';
 }
 
@@ -317,6 +334,13 @@ select {
 	display: grid;
 	grid-template-columns: 60% 40%;
 }
+
+@media screen and (max-width: 920px) {
+	
+	.infogrid{
+		display: block;
+	}
+  }
 
 /*   ADMIN PAGES    */
 
