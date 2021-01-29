@@ -11,6 +11,8 @@ const closed = document.querySelector('#closed');
 const button = document.querySelector('#submit-button');
 const table = document.querySelector('#report');
 const form = document.querySelector('#modify-data');
+const admin = document.querySelector('.adminbox');
+const denied = document.querySelector('#denied');
 let attInfo = {};
 let isClosed = '';
 let FORMSELECTED = 0;
@@ -24,7 +26,13 @@ window.onload = () => {
     API.get('/admin/v')
     .then(response => {
         attInfo = response;
-        console.log(response);
+        if (response.success == 'true') {
+            admin.style.display = 'grid';
+            denied.style.display = 'none';
+        } else {
+            denied.style.display = 'block';
+            admin.style.display = 'none;'
+        }
     });
     API.get('/totalres')
     .then(response => {
