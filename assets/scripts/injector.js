@@ -185,7 +185,7 @@ nav .button:hover{
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src='assets/scripts/burger.js'></script>
 
-    <a href="index.html"> <img src="assets/images/logo3-02.png" /> </a>
+    <a href="index.html"> <img src="assets/images/logo3-02.png" alt='scioto ridge logo' /> </a>
     
     <div class='links'>
 
@@ -364,7 +364,7 @@ button{
 
 <div class='foot-left'>
 <div id="footertext"> 
-<a href='index.html'><img src="assets/images/logo3-02.png" /></a>
+<a href='index.html'><img src="assets/images/logo3-02.png" alt='scioto ridge logo'/></a>
 <p> <em>7800 Refugee Road<br/> Pickerington, OH <br/> 43147 </em></p>
 </div>
 </div>
@@ -385,10 +385,10 @@ button{
     <p> <em> Follow Us </em> </p>
 
     <div class="socials">
-        <a href="https://www.facebook.com/scioto.ridge.18" target='_blank'><img src ="assets/images/foot1.png"></a>
-        <a href="https://instagram.com/sciotoridge?igshid=112puuc4s6hsw"target='_blank'><img src ="assets/images/foot2.png"></a>
-        <a href="https://twitter.com/ridgescioto?s=21"target='_blank'><img src ="assets/images/foot3.png"></a>
-        <a href="https://youtube.com/channel/UCakxFp_VzCdsfKUa6ToFUTQ" target='_blank'><img src ="assets/images/foot4.png"></a>
+        <a href="https://www.facebook.com/scioto.ridge.18" target='_blank'><img src ="assets/images/foot1.png" alt='facebook logo'></a>
+        <a href="https://instagram.com/sciotoridge?igshid=112puuc4s6hsw"target='_blank'><img src ="assets/images/foot2.png" alt='instagram logo'></a>
+        <a href="https://twitter.com/ridgescioto?s=21"target='_blank'><img src ="assets/images/foot3.png"alt='twitter logo'></a>
+        <a href="https://youtube.com/channel/UCakxFp_VzCdsfKUa6ToFUTQ" target='_blank'><img src ="assets/images/foot4.png" alt='youtube logo'></a>
 	</div>
     
 	<p> &copy 2021 High Thrills Entertainment, LLC </p>
