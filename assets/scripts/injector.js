@@ -299,6 +299,11 @@ footer img{
 	text-align: center;
 }
 
+#backtotop{
+	margin-top: 35px;
+	line-height: 20px;
+}
+
 .footbutt{
 	display: flex;
 	justify-content: center;
@@ -376,7 +381,8 @@ button{
 	<a class="button" id='register-button' href="register.html">Register</a>
 </div>
 	
-<a href="about.html" style=' color: var(--tan); font-size: 1.5em'>About Us</a>
+<a href="about.html" style=' color: var(--tan); font-size: 1.5em'>About Us</a><br><br>
+<a id='backtotop' href="#top" style=' color: var(--tan); font-size: 1.5em; ' >Back to Top</a>
 
 </div>
 
