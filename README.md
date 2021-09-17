@@ -5,5 +5,5 @@
 - The frontend of the site was created with HTML,CSS, and Javascript. The backend of the site consists of a mySQL database and a Node.js Rest API.
 
 
-Check out the site: ![Scioto Ridge](https://efctsmultimedians.com/webapp)
-Backend Repository ![scioto-ridge-api](https://github.com/garrett-c714/scioto-ridge-api)
+Check out the site: [Scioto Ridge](https://efctsmultimedians.com/webapp)
+Backend Repository [scioto-ridge-api](https://github.com/garrett-c714/scioto-ridge-api)
