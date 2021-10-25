@@ -9,4 +9,4 @@ Check out the site: [Scioto Ridge](https://efctsmultimedians.com/webapp)
 
 Backend Repository: [scioto-ridge-api](https://github.com/garrett-c714/scioto-ridge-api)
 
-Competiton Details: 
+
